@@ -27,7 +27,7 @@ extension Font{
        }
     //market place
    static var EuleMarketCards: Font{
-       return  EuleFont(.bold, 24)
+    return  EuleFont(.heavy, 24)
    }
     static var EuleLabel: Font{
           return  EuleFont(.medium, 18)

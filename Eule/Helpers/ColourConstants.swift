@@ -40,9 +40,16 @@ extension UIColor {
     static var EuleBackground: UIColor{
         return UIColor(red: 0.95, green: 0.99, blue: 0.98, alpha: 1.00)
     }
-    static var EuleCardBackGround: UIColor{
-           return UIColor(red:0.11, green:0.91, blue:0.72, alpha: 1.00)
+    static var ProductCardBackGround: UIColor{
+           return UIColor(red:0.83, green:0.72, blue:0.99, alpha: 1.00)
        }
+    static var CouponsCardBackGround: UIColor{
+              return UIColor(red: 0.98, green: 0.754, blue: 0.698, alpha: 1.00)
+          }
+    static var RiskGamesCardBackGround: UIColor{
+              return UIColor(red: 0.95, green:0.87, blue:0.67, alpha: 1.00)
+          }
+
     
     static var EuleAssistance: UIColor{
            return UIColor(red: 0.88, green: 0.29, blue: 0.16, alpha: 1.00)

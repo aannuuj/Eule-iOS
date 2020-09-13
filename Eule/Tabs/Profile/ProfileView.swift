@@ -17,19 +17,16 @@ struct ProfileView: View {
             ZStack{
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
                 VStack(alignment: .leading){
-                  
+                    
                     VStack{
-                           
-                        UserCardView()
-                           
-                        ScrollView {
+                        ScrollView(.vertical, showsIndicators: false) {
+                            UserCardView()
                             UserSection(title: "") {
                                 ProfileLinkView(
                                     title: "Location | \(location)",
                                     subtitle: "Your rewards are here",
                                     imageName: "Location"
                                 )
-                                
                                 ProfileLinkView(
                                     //                                action: { reactor.router.trigger(.faq) },
                                     title: "Account",
@@ -38,7 +35,6 @@ struct ProfileView: View {
                                 )
                                 
                                 ProfileLinkView(
-                                    
                                     title: "Payment History",
                                     subtitle: "All your transactions",
                                     imageName: "Payment.History"
@@ -52,33 +48,42 @@ struct ProfileView: View {
                             }
                             UserSection(title: "") {
                                 ProfileLinkView(
-                                    
                                     title: "Help & FAQ's",
                                     subtitle: "Get all you details here",
                                     imageName: "FAQ"
                                 )
                                 
                                 ProfileLinkView(
-                                    
                                     title: "Referals",
                                     subtitle: "Invite your friends to earn more",
                                     imageName: "Refrals"
                                 )
                                 
-                                ProfileLinkView(
-                                    title: "Fitness Devices",
-                                    subtitle: "Add and track your vitals",
-                                    imageName: "Fitness.Devices"
-                                )
+                               
                             }
+                            UserSection(title: "") {
+                                                         
+                                                          ProfileLinkView(
+                                                              title: "Fitness Devices",
+                                                              subtitle: "Add and track your vitals",
+                                                              imageName: "Fitness.Devices"
+                                                          )
+                                                      }
                             Button(
                             action:{}){
-                                HStack{
-                                    Image("Logout")
-                                        .renderingMode(.original)
-                                    Text("Logout")
-                                        .foregroundColor(.red)
-                                }
+                                VStack(alignment: .leading){
+                                 
+                                        VStack(alignment: .leading){
+                                               HStack{
+                                        Image("Logout")
+                                            .renderingMode(.original)
+                                        Text("Logout")
+                                            .foregroundColor(.black)
+                                    }
+                                    }
+                                }.frame(width: (UIScreen.main.bounds.width - 32), height: 55 )
+                                    .background(Color(.white))
+                                    .cornerRadius(15)
                             }
                         }
                     }

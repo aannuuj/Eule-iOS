@@ -30,6 +30,9 @@ struct RecordView: View {
                          
                         BottomSheetModal(display: $showBottomSheet) {
                             BottomSheetView()
+                                .onTapGesture {
+                                    
+                            }
                         }
                     }
                 }

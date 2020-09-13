@@ -10,7 +10,7 @@ import SwiftUI
 
 struct BottomSheetModal<Content: View>: View {
 
-  private let modalHeight: CGFloat = 380
+    private let modalHeight: CGFloat = UIScreen.main.bounds.height/2.3
   private let modalWidth: CGFloat = UIScreen.main.bounds.width
   private let modalCornerRadius: CGFloat = 10
   private let backgroundOpacity = 0.65
@@ -33,7 +33,7 @@ struct BottomSheetModal<Content: View>: View {
 
   private var background: some View {
     Color.black
-      .scaledToFill()
+      .fillParent()
       .opacity(backgroundOpacity)
         .animation(.easeOut)
   }

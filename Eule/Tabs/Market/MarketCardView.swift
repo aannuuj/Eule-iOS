@@ -11,29 +11,33 @@ import SwiftUI
 struct MarketCardView: View {
     var imageName = ""
     var cardTitle = ""
+    var CardColor: UIColor
 //
 //    var CardColor : Color = Color(red: <#T##Double#>, green: <#T##Double#>, blue: <#T##Double#>)
     var body: some View {
-        GeometryReader { geometry in
+        
             HStack.init(alignment: .center, spacing: 5){
                 Image(self.imageName)
                     .renderingMode(.original)
                     .resizable()
+                .frame(height: ( UIScreen.main.bounds.height/4))
                 Text(self.cardTitle.uppercased())
+                    .frame(alignment: .center)
                     .padding(.leading, 20)
                     .foregroundColor(.white)
                     .font(.EuleMarketCards)
+    
             }
-            .padding(.all)
-            .frame(width: geometry.size.width, height: 192)
-            .background(Color(red: 0.83, green: 0.72, blue: 0.99))
-            
-        }.cornerRadius(15)
+            .padding(.trailing)
+            .frame(width: ( UIScreen.main.bounds.width - 20), height: ( UIScreen.main.bounds.height/4.3))
+            .background(Color(CardColor))
+            .cornerRadius(15)
+        
     }
 }
 
 struct MarketCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MarketCardView()
+        MarketCardView( CardColor: .ProductCardBackGround)
     }
 }

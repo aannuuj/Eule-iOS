@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BE4F24B7250E13A1003D956D /* EuleAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F24B6250E13A1003D956D /* EuleAPI.swift */; };
-		BE4F24B9250E13D5003D956D /* ApplicationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4F24B8250E13D5003D956D /* ApplicationModel.swift */; };
 		BE5168D6250BA15D002450CE /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D5250BA15D002450CE /* PhoneNumber.swift */; };
 		BE5168D9250BA197002450CE /* MarketLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D7250BA197002450CE /* MarketLeftView.swift */; };
 		BE5168DA250BA197002450CE /* MarketRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D8250BA197002450CE /* MarketRightView.swift */; };
@@ -82,8 +80,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		BE4F24B6250E13A1003D956D /* EuleAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = EuleAPI.swift; path = "../Helpers/Bottom Sheet/EuleAPI.swift"; sourceTree = "<group>"; };
-		BE4F24B8250E13D5003D956D /* ApplicationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationModel.swift; sourceTree = "<group>"; };
 		BE5168D5250BA15D002450CE /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = Eule/Tabs/Market/PhoneNumber.swift; sourceTree = SOURCE_ROOT; };
 		BE5168D7250BA197002450CE /* MarketLeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketLeftView.swift; path = Eule/MarketLeftView.swift; sourceTree = SOURCE_ROOT; };
 		BE5168D8250BA197002450CE /* MarketRightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketRightView.swift; path = Eule/MarketRightView.swift; sourceTree = SOURCE_ROOT; };
@@ -183,8 +179,6 @@
 		BE5168C7250B954D002450CE /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
-				BE4F24B6250E13A1003D956D /* EuleAPI.swift */,
-				BE4F24B8250E13D5003D956D /* ApplicationModel.swift */,
 				BE5168F2250BE3A0002450CE /* APIClient.swift */,
 				BE5168F1250BE3A0002450CE /* Endpoint.swift */,
 				BE5168EF250BE3A0002450CE /* UnsplashClient.swift */,
@@ -505,7 +499,6 @@
 				BE91505824D4E4BA004B0BD1 /* NavigationBarColour.swift in Sources */,
 				BE91505224D4D151004B0BD1 /* HomeLeftView.swift in Sources */,
 				BE8D5353250C35C00081206E /*  LabRecordsView.swift in Sources */,
-				BE4F24B9250E13D5003D956D /* ApplicationModel.swift in Sources */,
 				BE91505424D4D1A3004B0BD1 /* HomeRightView.swift in Sources */,
 				BE8E665F250CC1140090E7E2 /* Card2.swift in Sources */,
 				BEA0801924E4547E00C855AD /* ProductView.swift in Sources */,
@@ -540,7 +533,6 @@
 				BE8E6661250CC1140090E7E2 /* CardsView.swift in Sources */,
 				BE5168F4250BE3A0002450CE /* UnsplashImages.swift in Sources */,
 				BEA2411F250D01F70037B628 /* AllPrescriptionsView.swift in Sources */,
-				BE4F24B7250E13A1003D956D /* EuleAPI.swift in Sources */,
 				BEA24127250D66AF0037B628 /* ViewRecords.swift in Sources */,
 				BE5168DA250BA197002450CE /* MarketRightView.swift in Sources */,
 				BE5168EC250BBD40002450CE /* UserCard.swift in Sources */,
