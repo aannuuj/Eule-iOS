@@ -11,7 +11,7 @@ import SwiftUI
 struct HomeLeftView: View {
         @State private var Tapped = false
     var body: some View {
-        
+       
         HStack {
           NavigationLink(destination: Healthcard(), isActive: $Tapped) { EmptyView() }
                 Button(action:{
@@ -23,10 +23,13 @@ struct HomeLeftView: View {
                     .font(.EuleHeading)
                     .foregroundColor(.EuleGreen)
             }
+            .buttonStyle(PlainButtonStyle())
            
             }
         }
+    
     }
+
 
 
 

@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ContentView: View {
     
+@State var showWebView = false
     var body: some View {
         NavigationView{
             ZStack{
@@ -23,7 +24,33 @@ struct ContentView: View {
                                 // parse data and more cards
                                 
                                 CardsView(image: "BackgroundImage", title: "Optimism may help you live longer", desc: "Can seeing the glass half full help you live longer?")
-                                EmergancyView()
+                                VStack(alignment: .leading, spacing: 10){
+                                    
+                                    HStack{
+                                        Text("Bulletin")
+                                            .font(.EuleTitle)
+                                            .foregroundColor(.gray)
+                                        Spacer()
+                                    }
+                                    VStack(alignment: .leading){
+                                        Button(action: {
+                                            self.showWebView.toggle()
+                                        }) {
+                                            BloodView()
+                                        } .sheet(isPresented: $showWebView, content: {
+                                            SafariView(url: URL(string: "https://eule.in/")!) })
+                                        Button(action: {
+                                            self.showWebView.toggle()
+                                        }) {
+                                            AssistanceView()
+                                        } .sheet(isPresented: $showWebView, content: {
+                                            SafariView(url: URL(string: "https://www.eule.in/")!) });
+                                    }
+                                    .background(Color.white)
+                                    .frame(width: 400, height: 100)
+                                    .cornerRadius(15)
+                                }
+                                .padding(.all, 3)
                                 RemindersView()
                                 GoalsView()
                             }
@@ -33,13 +60,12 @@ struct ContentView: View {
                         // make this in a line
                     }
                 }
-                 
             }
             .navigationBarColor(.EuleBackground
             )
-            .navigationBarItems(leading: HomeLeftView(),trailing: HomeRightView())
-            .navigationBarTitle("",displayMode: .inline)
-            .navigationViewStyle(StackNavigationViewStyle())
+                .navigationBarItems(leading: HomeLeftView(),trailing: HomeRightView())
+                .navigationBarTitle("",displayMode: .inline)
+            
         }
     }
 }

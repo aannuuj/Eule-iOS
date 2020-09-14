@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BAD7250FAA380037AFA6 /* UserName.swift */; };
+		BE12BADC250FABC90037AFA6 /* MedicalReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADB250FABC90037AFA6 /* MedicalReports.swift */; };
+		BE12BADE250FB05A0037AFA6 /* WebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */; };
 		BE5168D6250BA15D002450CE /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D5250BA15D002450CE /* PhoneNumber.swift */; };
 		BE5168D9250BA197002450CE /* MarketLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D7250BA197002450CE /* MarketLeftView.swift */; };
 		BE5168DA250BA197002450CE /* MarketRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D8250BA197002450CE /* MarketRightView.swift */; };
@@ -73,19 +76,26 @@
 		BEA24123250D32510037B628 /* CustomForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24122250D32510037B628 /* CustomForm.swift */; };
 		BEA24125250D4A7A0037B628 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24124250D4A7A0037B628 /* Extension.swift */; };
 		BEA24127250D66AF0037B628 /* ViewRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24126250D66AF0037B628 /* ViewRecords.swift */; };
+		BEB8E8F2250E932A00286678 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E8F1250E932A00286678 /* TempView.swift */; };
+		BEB8E8F4250E9CC100286678 /* AddGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E8F3250E9CC100286678 /* AddGoals.swift */; };
+		BEB8E900250EB69B00286678 /* Checkups.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E8FF250EB69B00286678 /* Checkups.swift */; };
+		BEB8E902250EB6C300286678 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E901250EB6C300286678 /* Medication.swift */; };
+		BEB8E904250EB6DB00286678 /* Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E903250EB6DB00286678 /* Upcoming.swift */; };
 		BEC733FA24D7684D00150220 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC733F924D7684D00150220 /* FontConstants.swift */; };
-		BEE2C07924FEEB96008B7E23 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2C07824FEEB96008B7E23 /* User.swift */; };
 		BEE2C07B24FEEC6B008B7E23 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2C07A24FEEC6B008B7E23 /* ImageView.swift */; };
 		BEE2C07D24FEF14B008B7E23 /* OTPVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE12BAD7250FAA380037AFA6 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
+		BE12BADB250FABC90037AFA6 /* MedicalReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalReports.swift; path = ../../MedicalReports.swift; sourceTree = "<group>"; };
+		BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewExtension.swift; path = ../Login/WebViewExtension.swift; sourceTree = "<group>"; };
 		BE5168D5250BA15D002450CE /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = Eule/Tabs/Market/PhoneNumber.swift; sourceTree = SOURCE_ROOT; };
 		BE5168D7250BA197002450CE /* MarketLeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketLeftView.swift; path = Eule/MarketLeftView.swift; sourceTree = SOURCE_ROOT; };
 		BE5168D8250BA197002450CE /* MarketRightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketRightView.swift; path = Eule/MarketRightView.swift; sourceTree = SOURCE_ROOT; };
 		BE5168DB250BA3D4002450CE /* Healthcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Healthcard.swift; path = ../../../Healthcard.swift; sourceTree = "<group>"; };
 		BE5168DD250BA673002450CE /* Payments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Payments.swift; path = NavigationView/Payments.swift; sourceTree = "<group>"; };
-		BE5168DF250BA719002450CE /* LeftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LeftView.swift; path = ../LeftView.swift; sourceTree = "<group>"; };
+		BE5168DF250BA719002450CE /* LeftView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftView.swift; sourceTree = "<group>"; };
 		BE5168E5250BAC57002450CE /* RightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightView.swift; sourceTree = "<group>"; };
 		BE5168E7250BB395002450CE /* ProfileLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileLinkView.swift; path = ../ProfileLinkView.swift; sourceTree = "<group>"; };
 		BE5168E9250BB528002450CE /* UserSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserSection.swift; path = ../UserSection.swift; sourceTree = "<group>"; };
@@ -158,8 +168,12 @@
 		BEA24122250D32510037B628 /* CustomForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForm.swift; sourceTree = "<group>"; };
 		BEA24124250D4A7A0037B628 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BEA24126250D66AF0037B628 /* ViewRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRecords.swift; sourceTree = "<group>"; };
+		BEB8E8F1250E932A00286678 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
+		BEB8E8F3250E9CC100286678 /* AddGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddGoals.swift; path = ../../../../AddGoals.swift; sourceTree = "<group>"; };
+		BEB8E8FF250EB69B00286678 /* Checkups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checkups.swift; path = Eule/Tabs/Home/Goals/Checkups.swift; sourceTree = SOURCE_ROOT; };
+		BEB8E901250EB6C300286678 /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = SOURCE_ROOT; };
+		BEB8E903250EB6DB00286678 /* Upcoming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming.swift; sourceTree = "<group>"; };
 		BEC733F924D7684D00150220 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
-		BEE2C07824FEEB96008B7E23 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = User.swift; path = ../User.swift; sourceTree = "<group>"; };
 		BEE2C07A24FEEC6B008B7E23 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OTPVerification.swift; path = ../../OTPVerification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -191,15 +205,12 @@
 			isa = PBXGroup;
 			children = (
 				BE91502B24D4B2F2004B0BD1 /* ContentView.swift */,
-				BE5168D4250BA104002450CE /* NavigationView */,
-				BE91504D24D4CD58004B0BD1 /* GoalsView.swift */,
-				BE8D534A250C291C0081206E /* AllGoals.swift */,
-				BE5168DD250BA673002450CE /* Payments.swift */,
 				BE5168DB250BA3D4002450CE /* Healthcard.swift */,
-				BE91504F24D4CD61004B0BD1 /* RemindersView.swift */,
-				BE91504B24D4CD1D004B0BD1 /* EmergancyView.swift */,
-				BE8D5344250C1C730081206E /* AssistanceView.swift */,
-				BE8D5342250C1C3F0081206E /* BloodView.swift */,
+				BE5168DD250BA673002450CE /* Payments.swift */,
+				BEB8E8FE250EB56A00286678 /* Bulletin */,
+				BEB8E8F7250EB1C100286678 /* Reminders */,
+				BE5168D4250BA104002450CE /* NavigationView */,
+				BEB8E8F0250E87FA00286678 /* Goals */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -207,6 +218,12 @@
 		BE5168D1250BA047002450CE /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */,
+				BEA24122250D32510037B628 /* CustomForm.swift */,
+				BEA24118250CF99D0037B628 /* TitleView.swift */,
+				BE5168DF250BA719002450CE /* LeftView.swift */,
+				BE5168E5250BAC57002450CE /* RightView.swift */,
+				BEA24124250D4A7A0037B628 /* Extension.swift */,
 				BE8E665B250CC0D40090E7E2 /* Cards */,
 				BE91505524D4E49B004B0BD1 /* NavigationExtension.swift */,
 				BE91505724D4E4BA004B0BD1 /* NavigationBarColour.swift */,
@@ -235,10 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				BE91505124D4D151004B0BD1 /* HomeLeftView.swift */,
-				BE8D5348250C24930081206E /* AllReminders.swift */,
 				BE91505324D4D1A2004B0BD1 /* HomeRightView.swift */,
-				BE5168DF250BA719002450CE /* LeftView.swift */,
-				BE5168E5250BAC57002450CE /* RightView.swift */,
 			);
 			path = NavigationView;
 			sourceTree = "<group>";
@@ -277,15 +291,12 @@
 				BE8D5350250C35B30081206E /* VitalsView.swift */,
 				BE8D5352250C35C00081206E /*  LabRecordsView.swift */,
 				BE8E6650250CAE2B0090E7E2 /* AllRecords.swift */,
-				BEA24118250CF99D0037B628 /* TitleView.swift */,
 				BE8E6662250CCBA10090E7E2 /* BottomSheetView.swift */,
 				BE8D5354250C35D10081206E /* PrecriptionsView.swift */,
 				BEA2411E250D01F70037B628 /* AllPrescriptionsView.swift */,
 				BEA24120250D23D20037B628 /* AddRecords.swift */,
 				BEA24126250D66AF0037B628 /* ViewRecords.swift */,
-				BEA24124250D4A7A0037B628 /* Extension.swift */,
 				BE8D5359250C389A0081206E /* LabCard.swift */,
-				BEA24122250D32510037B628 /* CustomForm.swift */,
 			);
 			path = Records;
 			sourceTree = "<group>";
@@ -390,12 +401,46 @@
 			path = Market;
 			sourceTree = "<group>";
 		};
+		BEB8E8F0250E87FA00286678 /* Goals */ = {
+			isa = PBXGroup;
+			children = (
+				BE91504D24D4CD58004B0BD1 /* GoalsView.swift */,
+				BE8D534A250C291C0081206E /* AllGoals.swift */,
+				BEB8E8F1250E932A00286678 /* TempView.swift */,
+				BEB8E8F3250E9CC100286678 /* AddGoals.swift */,
+			);
+			path = Goals;
+			sourceTree = "<group>";
+		};
+		BEB8E8F7250EB1C100286678 /* Reminders */ = {
+			isa = PBXGroup;
+			children = (
+				BE91504F24D4CD61004B0BD1 /* RemindersView.swift */,
+				BE8D5348250C24930081206E /* AllReminders.swift */,
+				BEB8E903250EB6DB00286678 /* Upcoming.swift */,
+				BEB8E901250EB6C300286678 /* Medication.swift */,
+				BEB8E8FF250EB69B00286678 /* Checkups.swift */,
+			);
+			path = Reminders;
+			sourceTree = "<group>";
+		};
+		BEB8E8FE250EB56A00286678 /* Bulletin */ = {
+			isa = PBXGroup;
+			children = (
+				BE91504B24D4CD1D004B0BD1 /* EmergancyView.swift */,
+				BE8D5344250C1C730081206E /* AssistanceView.swift */,
+				BE8D5342250C1C3F0081206E /* BloodView.swift */,
+			);
+			path = Bulletin;
+			sourceTree = "<group>";
+		};
 		BEC14FAC24FBB2550064761B /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				BE5168D5250BA15D002450CE /* PhoneNumber.swift */,
 				BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */,
-				BEE2C07824FEEB96008B7E23 /* User.swift */,
+				BE12BAD7250FAA380037AFA6 /* UserName.swift */,
+				BE12BADB250FABC90037AFA6 /* MedicalReports.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -472,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEB8E8F4250E9CC100286678 /* AddGoals.swift in Sources */,
 				BEE2C07B24FEEC6B008B7E23 /* ImageView.swift in Sources */,
 				BE8D5351250C35B30081206E /* VitalsView.swift in Sources */,
 				BEC733FA24D7684D00150220 /* FontConstants.swift in Sources */,
@@ -493,7 +539,6 @@
 				BE8D5343250C1C3F0081206E /* BloodView.swift in Sources */,
 				BE8D534B250C291C0081206E /* AllGoals.swift in Sources */,
 				BE5168D6250BA15D002450CE /* PhoneNumber.swift in Sources */,
-				BEE2C07924FEEB96008B7E23 /* User.swift in Sources */,
 				BE91503E24D4BB10004B0BD1 /* RecordView.swift in Sources */,
 				BE5168DC250BA3D4002450CE /* Healthcard.swift in Sources */,
 				BE91505824D4E4BA004B0BD1 /* NavigationBarColour.swift in Sources */,
@@ -502,6 +547,7 @@
 				BE91505424D4D1A3004B0BD1 /* HomeRightView.swift in Sources */,
 				BE8E665F250CC1140090E7E2 /* Card2.swift in Sources */,
 				BEA0801924E4547E00C855AD /* ProductView.swift in Sources */,
+				BEB8E902250EB6C300286678 /* Medication.swift in Sources */,
 				BE91502724D4B2F2004B0BD1 /* SceneDelegate.swift in Sources */,
 				BE8E6663250CCBA10090E7E2 /* BottomSheetView.swift in Sources */,
 				BEE2C07D24FEF14B008B7E23 /* OTPVerification.swift in Sources */,
@@ -512,14 +558,18 @@
 				BEA24125250D4A7A0037B628 /* Extension.swift in Sources */,
 				BE5168D9250BA197002450CE /* MarketLeftView.swift in Sources */,
 				BE8E6660250CC1140090E7E2 /* Cards.swift in Sources */,
+				BE12BADC250FABC90037AFA6 /* MedicalReports.swift in Sources */,
 				BEA0801524E434AF00C855AD /* MarketCardView.swift in Sources */,
 				BEA0801724E451EF00C855AD /* NoInternetView.swift in Sources */,
 				BEA24123250D32510037B628 /* CustomForm.swift in Sources */,
+				BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */,
 				BE91502C24D4B2F2004B0BD1 /* ContentView.swift in Sources */,
+				BEB8E8F2250E932A00286678 /* TempView.swift in Sources */,
 				BE91503C24D4B950004B0BD1 /* AppView.swift in Sources */,
 				BEA0802124E49ABD00C855AD /* EuleButtons.swift in Sources */,
 				BE8D5349250C24930081206E /* AllReminders.swift in Sources */,
 				BE91504624D4C0A6004B0BD1 /* ColourConstants.swift in Sources */,
+				BEB8E904250EB6DB00286678 /* Upcoming.swift in Sources */,
 				BEA2411D250CFFBC0037B628 /* GoalsCard.swift in Sources */,
 				BE5168F5250BE3A0002450CE /* Endpoint.swift in Sources */,
 				BEA2411B250CFC410037B628 /* AddCard.swift in Sources */,
@@ -531,12 +581,14 @@
 				BE91504024D4BB1F004B0BD1 /* MarketView.swift in Sources */,
 				BEA24121250D23D20037B628 /* AddRecords.swift in Sources */,
 				BE8E6661250CC1140090E7E2 /* CardsView.swift in Sources */,
+				BEB8E900250EB69B00286678 /* Checkups.swift in Sources */,
 				BE5168F4250BE3A0002450CE /* UnsplashImages.swift in Sources */,
 				BEA2411F250D01F70037B628 /* AllPrescriptionsView.swift in Sources */,
 				BEA24127250D66AF0037B628 /* ViewRecords.swift in Sources */,
 				BE5168DA250BA197002450CE /* MarketRightView.swift in Sources */,
 				BE5168EC250BBD40002450CE /* UserCard.swift in Sources */,
 				BE5168F6250BE3A0002450CE /* APIClient.swift in Sources */,
+				BE12BADE250FB05A0037AFA6 /* WebViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

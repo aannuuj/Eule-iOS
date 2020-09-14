@@ -33,7 +33,7 @@ struct RemindersView: View {
                 HStack(alignment: .center, spacing: 8){
                 // make a list of cards and fetch
                 ForEach(reminders) { item in
-                    Card(reminder: item)
+                    Card(reminder: item, size: 120)
 //                     Text("Hi")
                 }
                     AddCard()

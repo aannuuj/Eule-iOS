@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct GoalsView: View {
+     @State var addGoalsScreen = false
        @State private var Tapped = false
     var goals: [Goals] = goalsList
      var body: some View {
@@ -36,6 +37,7 @@ struct GoalsView: View {
                         GoalsCard(goals: item)
                     }
                 AddCard()
+                
              }
              }
          }
@@ -48,3 +50,5 @@ struct GoalsView_Previews: PreviewProvider {
         .previewLayout(.sizeThatFits)
     }
 }
+
+

@@ -26,3 +26,25 @@ struct EuleButtons_Previews: PreviewProvider {
         EuleButtons()
     }
 }
+
+public struct EuleGreenButton: ButtonStyle {
+    public func makeBody(configuration: Configuration) -> some View {
+        HStack(alignment: .center) {
+            Spacer()
+            configuration.label
+                .font(.EuleHeading)
+            Spacer()
+        }
+        .frame(height: 55)
+        .background(Color.EuleGreen)
+        .foregroundColor(Color.white)
+        .overlay(Color.white.opacity(configuration.isPressed ? 0.5 : 0.0))
+             .cornerRadius(15)
+            .padding()
+   
+    }
+    
+    public init() {
+        
+    }
+}

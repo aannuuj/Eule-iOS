@@ -49,7 +49,10 @@ extension UIColor {
     static var RiskGamesCardBackGround: UIColor{
               return UIColor(red: 0.95, green:0.87, blue:0.67, alpha: 1.00)
           }
-
+    static var Card1: UIColor{
+              return UIColor(red:0.90, green:0.84, blue:0.52
+                , alpha: 1.00)
+          }
     
     static var EuleAssistance: UIColor{
            return UIColor(red: 0.88, green: 0.29, blue: 0.16, alpha: 1.00)
@@ -57,6 +60,10 @@ extension UIColor {
     static var EuleText: UIColor{
            return UIColor(red: 196, green: 196, blue: 196, alpha: 1.00)
        }
+    static var BloodBackground: UIColor{
+        return UIColor(red: 0.945, green: 0.984, blue: 0.98, alpha: 1.00)
+          }
+  
  
 }
 

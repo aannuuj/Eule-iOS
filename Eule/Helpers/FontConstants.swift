@@ -21,6 +21,10 @@ extension Font{
     
     static var EuleTitle: Font{
         return EuleFont(.regular, 14)
+    
+    }
+    static var EuleTitle2: Font{
+        return EuleFont(.regular, 16)
     }
     static var  EuleTabBar: Font{
            return EuleFont(.medium, 12)
@@ -32,6 +36,9 @@ extension Font{
     static var EuleLabel: Font{
           return  EuleFont(.medium, 18)
       }
+    static var EuleLabelBold: Font{
+        return  EuleFont(.bold, 18)
+    }
     static var EuleDesc: Font{
             return  EuleFont(.light, 12)
         }
