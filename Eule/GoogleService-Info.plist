@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>2945788262-46khv3urre8b8e2s05f72d8bnknga01b.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.2945788262-46khv3urre8b8e2s05f72d8bnknga01b</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>2945788262-fn3s6t5cjs6fv14ct2tuu7p9f442a0ed.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCJIcrcY1xQgjyR-d4BxsKUYJiVVgbcYXs</string>
+	<key>GCM_SENDER_ID</key>
+	<string>2945788262</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>eule.com</string>
+	<key>PROJECT_ID</key>
+	<string>eule-b4d9e</string>
+	<key>STORAGE_BUCKET</key>
+	<string>eule-b4d9e.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:2945788262:ios:b282d706d1a7f6ee8840a7</string>
+	<key>DATABASE_URL</key>
+	<string>https://eule-b4d9e.firebaseio.com</string>
+</dict>
+</plist>

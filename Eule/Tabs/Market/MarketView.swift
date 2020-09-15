@@ -18,11 +18,11 @@ struct MarketView: View {
                     NavigationLink(destination: ProductView()) {
                         MarketCardView(imageName: "Market.Product", cardTitle: "Products", CardColor: .ProductCardBackGround)
                     }
-                    NavigationLink(destination: ComingSoonView(excited: false)) {
+                    NavigationLink(destination: ComingSoonView()) {
                         MarketCardView(imageName: "Market.RiskGames", cardTitle: "Risk\nGames", CardColor: .RiskGamesCardBackGround)
                     }
                     
-                    NavigationLink(destination: ComingSoonView(excited: false)) {
+                    NavigationLink(destination: ComingSoonView()) {
                         MarketCardView(imageName: "Market.Coupons", cardTitle: "Coupons", CardColor: .CouponsCardBackGround)
                     }
                 }

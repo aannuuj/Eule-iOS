@@ -13,7 +13,7 @@ struct HomeLeftView: View {
     var body: some View {
        
         HStack {
-          NavigationLink(destination: Healthcard(), isActive: $Tapped) { EmptyView() }
+          NavigationLink(destination: HealthcardView(), isActive: $Tapped) { EmptyView() }
                 Button(action:{
                        self.Tapped = true
                 }){

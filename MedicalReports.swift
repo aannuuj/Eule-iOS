@@ -15,7 +15,7 @@ struct MedicalReports: View {
     @State private var ScanTapped = false
     var size = UIScreen.main.bounds
     var body: some View {
-        NavigationView{
+       
             ZStack{
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
                 VStack(alignment: .center, spacing: 10){
@@ -51,12 +51,17 @@ struct MedicalReports: View {
                         }
                         Spacer()
                         
-                        NavigationLink(destination: ComingSoonView(excited: false), isActive: $OnTapped) { EmptyView() }
+                        NavigationLink(destination: AppView(), isActive: $OnTapped) { EmptyView() }
                                                 Button(action: {
                              self.OnTapped = true}){
                             Text("Skip")
                             
                         }.buttonStyle(EuleGreenButton())
+                                                    .onTapGesture {
+                                                        UserDefaults.standard.set(true, forKey: "status")
+                                                                                      
+                                                                                      NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+                        }
                         
                         
                     }.background(Color.white)
@@ -71,10 +76,7 @@ struct MedicalReports: View {
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarHidden(true)
             .accentColor(.EuleGreen)
-            .onAppear {
-                
-            }
-        }
+         
     }
 }
 

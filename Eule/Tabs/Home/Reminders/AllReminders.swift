@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct AllReminders: View {
+     @State private var showBottomSheet = false
     var body: some View {
         
         ZStack{
@@ -29,11 +30,21 @@ struct AllReminders: View {
                              .padding(.leading, 32)
                         }
                     }
-                   
+                   BottomSheetModal(display: $showBottomSheet) {
+                                            BottomSheetView2()
+                                                .onTapGesture {
+                                                   // dismiss view
+                                            }
+                                        }
                 }
             }
             .navigationBarColor(.EuleBackground)
-            .navigationBarItems(leading: TitleView(title: "Reminders"))
+            .navigationBarItems(leading: TitleView(title: "Reminders"), trailing: Button(action: {
+                 self.showBottomSheet.toggle()
+            }){
+                Image("Add")
+                    .frame(width: 44, height: 44)
+            })
             .navigationBarTitle("",displayMode: .inline)
             
         }

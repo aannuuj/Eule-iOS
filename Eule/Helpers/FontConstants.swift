@@ -18,6 +18,9 @@ extension Font{
     static var EuleHeading: Font{
         return  EuleFont(.bold, 22)
     }
+    static var EuleBulkHeading: Font{
+        return  EuleFont(.bold, 28)
+    }
     
     static var EuleTitle: Font{
         return EuleFont(.regular, 14)

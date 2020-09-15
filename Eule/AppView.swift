@@ -85,7 +85,7 @@ struct AppView: View {
                 
             }
             .tag(3)
-            PhoneNumber()
+            SocialView()
                 .onTapGesture {
                     self.selection = 4
             }

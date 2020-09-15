@@ -7,10 +7,12 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct ProfileView: View {
     var location = "Pune"
-    
+     @State var alert = false
     var body: some View {
         
         NavigationView{
@@ -69,29 +71,42 @@ struct ProfileView: View {
                                                               imageName: "Fitness.Devices"
                                                           )
                                                       }
-                            Button(
-                            action:{}){
+                            Button(action: {
+                                
+                                self.alert = true
+                                
+                            }){
                                 VStack(alignment: .leading){
                                  
-                                        VStack(alignment: .leading){
-                                               HStack{
+                                  HStack(alignment: .center, spacing: 11){
                                         Image("Logout")
                                             .renderingMode(.original)
                                         Text("Logout")
                                             .foregroundColor(.black)
-                                    }
-                                    }
+                                        Spacer()
+                                    } .padding([.leading, .leading, .trailing])
+                                    
                                 }.frame(width: (UIScreen.main.bounds.width - 32), height: 55 )
                                     .background(Color(.white))
                                     .cornerRadius(15)
                             }
+                            Spacer()
                         }
                     }
                     .navigationBarColor(.EuleBackground
                     )
                         .navigationBarItems(leading: LeftView(ButtonImage: "", ViewHeading: "Profile"))
                         .navigationBarTitle("",displayMode: .inline)
-                }
+                }  .alert(isPresented: $alert) {
+                                           
+                    Alert(title: Text("Are you sure you want to logout?"), message: Text(""),primaryButton: .destructive(Text("Log Out"), action: ({
+                         try! Auth.auth().signOut()
+                                                       
+                                                       UserDefaults.standard.set(false, forKey: "status")
+                                                       
+                                                       NotificationCenter.default.post(name: NSNotification.Name("statusChange"), object: nil)
+                    })), secondaryButton: .cancel((Text("Cancel"))))
+                                   }
             }
         }
     }

@@ -24,3 +24,11 @@ let goalsList: [Goals] = [
     Goals(goalName: "Meditate", goalTime: "25 Min", goalColor: UIColor.white,  goalType: "Meditate", foregroundColor: Color.black),
     Goals(goalName: "Sleep", goalTime: "7 HRs", goalColor: UIColor.white, goalType: "Sleep", foregroundColor: Color.black)
 ]
+//let reportsList: [LabReports] = [
+//    Goals(goalName: "gym", goalTime: "15 Min", goalColor: UIColor.EuleGreen,  goalType: "Gym", foregroundColor: Color.white),
+//    Goals(goalName: "Run", goalTime: "25 Min", goalColor: UIColor.white,  goalType: "Run", foregroundColor: Color.black),
+//    Goals(goalName: "Yoga", goalTime: "25 Min", goalColor: UIColor.white, goalType: "Yoga", foregroundColor: Color.black),
+//    Goals(goalName: "2000cl", goalTime: "", goalColor: UIColor.white, goalType: "Food", foregroundColor: Color.black),
+//    Goals(goalName: "Meditate", goalTime: "25 Min", goalColor: UIColor.white,  goalType: "Meditate", foregroundColor: Color.black),
+//    Goals(goalName: "Sleep", goalTime: "7 HRs", goalColor: UIColor.white, goalType: "Sleep", foregroundColor: Color.black)
+//]

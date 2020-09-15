@@ -290,6 +290,10 @@ struct Healthcard: View {
                             .background(Color.white)
                             .cornerRadius(12)
                         }
+                        Button(action: {}){
+                            Text("Save")
+                        }.buttonStyle(EuleGreenButton())
+                        
                     }
                     .padding(.init(top: 10, leading: 16, bottom: 10, trailing: 16))
                 }
@@ -297,7 +301,7 @@ struct Healthcard: View {
             }
             .navigationBarColor(.EuleBackground)
                 
-            .navigationBarTitle("Health Card", displayMode: .inline)
+            .navigationBarTitle("", displayMode: .inline)
         }
     }
 }

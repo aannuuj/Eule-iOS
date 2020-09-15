@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93447D73C855745ACDB92474 /* Pods_Eule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */; };
 		BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BAD7250FAA380037AFA6 /* UserName.swift */; };
 		BE12BADC250FABC90037AFA6 /* MedicalReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADB250FABC90037AFA6 /* MedicalReports.swift */; };
 		BE12BADE250FB05A0037AFA6 /* WebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */; };
@@ -24,6 +25,13 @@
 		BE5168F4250BE3A0002450CE /* UnsplashImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168F0250BE3A0002450CE /* UnsplashImages.swift */; };
 		BE5168F5250BE3A0002450CE /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168F1250BE3A0002450CE /* Endpoint.swift */; };
 		BE5168F6250BE3A0002450CE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168F2250BE3A0002450CE /* APIClient.swift */; };
+		BE60AAA4251117A20005B0CE /* AddReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60AAA3251117A20005B0CE /* AddReminders.swift */; };
+		BE60AAA625111F050005B0CE /* BottomSheetView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60AAA525111F050005B0CE /* BottomSheetView2.swift */; };
+		BE77162C2510C8C600891F87 /* HealthcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77162B2510C8C600891F87 /* HealthcardView.swift */; };
+		BE77162E2510DA1E00891F87 /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77162D2510DA1E00891F87 /* LockScreen.swift */; };
+		BE7716302510EB1000891F87 /* NameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77162F2510EB1000891F87 /* NameView.swift */; };
+		BE81D30A25100FFC00704D8B /* ComingSoonDecider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81D30925100FFC00704D8B /* ComingSoonDecider.swift */; };
+		BE81D30C2510108F00704D8B /* ExcitedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81D30B2510108F00704D8B /* ExcitedView.swift */; };
 		BE8D5343250C1C3F0081206E /* BloodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5342250C1C3F0081206E /* BloodView.swift */; };
 		BE8D5345250C1C730081206E /* AssistanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5344250C1C730081206E /* AssistanceView.swift */; };
 		BE8D5349250C24930081206E /* AllReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE8D5348250C24930081206E /* AllReminders.swift */; };
@@ -76,17 +84,23 @@
 		BEA24123250D32510037B628 /* CustomForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24122250D32510037B628 /* CustomForm.swift */; };
 		BEA24125250D4A7A0037B628 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24124250D4A7A0037B628 /* Extension.swift */; };
 		BEA24127250D66AF0037B628 /* ViewRecords.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24126250D66AF0037B628 /* ViewRecords.swift */; };
+		BEA8844225110BE80009BCE4 /* AddCheckups.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA8844125110BE80009BCE4 /* AddCheckups.swift */; };
 		BEB8E8F2250E932A00286678 /* TempView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E8F1250E932A00286678 /* TempView.swift */; };
 		BEB8E8F4250E9CC100286678 /* AddGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E8F3250E9CC100286678 /* AddGoals.swift */; };
 		BEB8E900250EB69B00286678 /* Checkups.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E8FF250EB69B00286678 /* Checkups.swift */; };
 		BEB8E902250EB6C300286678 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E901250EB6C300286678 /* Medication.swift */; };
 		BEB8E904250EB6DB00286678 /* Upcoming.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB8E903250EB6DB00286678 /* Upcoming.swift */; };
+		BEB9B576250FE3F500DA0CC6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BEB9B575250FE3F500DA0CC6 /* GoogleService-Info.plist */; };
+		BEB9B578250FEA7800DA0CC6 /* AppRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB9B577250FEA7800DA0CC6 /* AppRoot.swift */; };
 		BEC733FA24D7684D00150220 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC733F924D7684D00150220 /* FontConstants.swift */; };
 		BEE2C07B24FEEC6B008B7E23 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2C07A24FEEC6B008B7E23 /* ImageView.swift */; };
 		BEE2C07D24FEF14B008B7E23 /* OTPVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		426CD69EB60B9FC19055F91F /* Pods-Eule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eule.release.xcconfig"; path = "Target Support Files/Pods-Eule/Pods-Eule.release.xcconfig"; sourceTree = "<group>"; };
+		49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEC93311CDDE79712FF9D707 /* Pods-Eule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eule.debug.xcconfig"; path = "Target Support Files/Pods-Eule/Pods-Eule.debug.xcconfig"; sourceTree = "<group>"; };
 		BE12BAD7250FAA380037AFA6 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		BE12BADB250FABC90037AFA6 /* MedicalReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalReports.swift; path = ../../MedicalReports.swift; sourceTree = "<group>"; };
 		BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewExtension.swift; path = ../Login/WebViewExtension.swift; sourceTree = "<group>"; };
@@ -113,6 +127,13 @@
 		BE5A9EA224F576C700D2D19C /* Inter-Medium-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Medium-slnt=0.ttf"; sourceTree = "<group>"; };
 		BE5A9EA324F576C700D2D19C /* Inter-ExtraLight-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-ExtraLight-slnt=0.ttf"; sourceTree = "<group>"; };
 		BE5A9EA424F576C700D2D19C /* Inter-Bold-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold-slnt=0.ttf"; sourceTree = "<group>"; };
+		BE60AAA3251117A20005B0CE /* AddReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminders.swift; sourceTree = "<group>"; };
+		BE60AAA525111F050005B0CE /* BottomSheetView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomSheetView2.swift; path = ../../../../BottomSheetView2.swift; sourceTree = "<group>"; };
+		BE77162B2510C8C600891F87 /* HealthcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcardView.swift; sourceTree = "<group>"; };
+		BE77162D2510DA1E00891F87 /* LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LockScreen.swift; path = Tabs/Home/LockScreen.swift; sourceTree = "<group>"; };
+		BE77162F2510EB1000891F87 /* NameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameView.swift; sourceTree = "<group>"; };
+		BE81D30925100FFC00704D8B /* ComingSoonDecider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonDecider.swift; sourceTree = "<group>"; };
+		BE81D30B2510108F00704D8B /* ExcitedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcitedView.swift; sourceTree = "<group>"; };
 		BE8D5342250C1C3F0081206E /* BloodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BloodView.swift; sourceTree = "<group>"; };
 		BE8D5344250C1C730081206E /* AssistanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistanceView.swift; sourceTree = "<group>"; };
 		BE8D5348250C24930081206E /* AllReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllReminders.swift; sourceTree = "<group>"; };
@@ -168,11 +189,14 @@
 		BEA24122250D32510037B628 /* CustomForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomForm.swift; sourceTree = "<group>"; };
 		BEA24124250D4A7A0037B628 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BEA24126250D66AF0037B628 /* ViewRecords.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRecords.swift; sourceTree = "<group>"; };
+		BEA8844125110BE80009BCE4 /* AddCheckups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddCheckups.swift; path = Checkups/AddCheckups.swift; sourceTree = "<group>"; };
 		BEB8E8F1250E932A00286678 /* TempView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempView.swift; sourceTree = "<group>"; };
 		BEB8E8F3250E9CC100286678 /* AddGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddGoals.swift; path = ../../../../AddGoals.swift; sourceTree = "<group>"; };
 		BEB8E8FF250EB69B00286678 /* Checkups.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Checkups.swift; path = Eule/Tabs/Home/Goals/Checkups.swift; sourceTree = SOURCE_ROOT; };
 		BEB8E901250EB6C300286678 /* Medication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = SOURCE_ROOT; };
 		BEB8E903250EB6DB00286678 /* Upcoming.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Upcoming.swift; sourceTree = "<group>"; };
+		BEB9B575250FE3F500DA0CC6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BEB9B577250FEA7800DA0CC6 /* AppRoot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppRoot.swift; path = Login/AppRoot.swift; sourceTree = "<group>"; };
 		BEC733F924D7684D00150220 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		BEE2C07A24FEEC6B008B7E23 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OTPVerification.swift; path = ../../OTPVerification.swift; sourceTree = "<group>"; };
@@ -184,12 +208,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE9673DE24EBAA7300AF0AD9 /* HealthKit.framework in Frameworks */,
+				93447D73C855745ACDB92474 /* Pods_Eule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5995928AEEBDF48DFE6BE589 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AEC93311CDDE79712FF9D707 /* Pods-Eule.debug.xcconfig */,
+				426CD69EB60B9FC19055F91F /* Pods-Eule.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BE5168C7250B954D002450CE /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -206,6 +240,7 @@
 			children = (
 				BE91502B24D4B2F2004B0BD1 /* ContentView.swift */,
 				BE5168DB250BA3D4002450CE /* Healthcard.swift */,
+				BE77162B2510C8C600891F87 /* HealthcardView.swift */,
 				BE5168DD250BA673002450CE /* Payments.swift */,
 				BEB8E8FE250EB56A00286678 /* Bulletin */,
 				BEB8E8F7250EB1C100286678 /* Reminders */,
@@ -338,6 +373,7 @@
 				BE91502324D4B2F2004B0BD1 /* Eule */,
 				BE91502224D4B2F2004B0BD1 /* Products */,
 				BE9673DC24EBAA7300AF0AD9 /* Frameworks */,
+				5995928AEEBDF48DFE6BE589 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -355,6 +391,9 @@
 				BE9673DB24EBAA4300AF0AD9 /* Eule.entitlements */,
 				BE91502424D4B2F2004B0BD1 /* AppDelegate.swift */,
 				BE91502624D4B2F2004B0BD1 /* SceneDelegate.swift */,
+				BEB9B577250FEA7800DA0CC6 /* AppRoot.swift */,
+				BE77162F2510EB1000891F87 /* NameView.swift */,
+				BE77162D2510DA1E00891F87 /* LockScreen.swift */,
 				BE91503B24D4B950004B0BD1 /* AppView.swift */,
 				BE8E6664250CD7A80090E7E2 /* Brain */,
 				BE5168C7250B954D002450CE /* NetworkLayer */,
@@ -362,10 +401,13 @@
 				BE5168D1250BA047002450CE /* Helpers */,
 				BEC14FAC24FBB2550064761B /* Login */,
 				BEA0801C24E454A300C855AD /* ComingSoonview.swift */,
+				BE81D30925100FFC00704D8B /* ComingSoonDecider.swift */,
+				BE81D30B2510108F00704D8B /* ExcitedView.swift */,
 				BEA0801624E451EF00C855AD /* NoInternetView.swift */,
 				BE91502D24D4B2F7004B0BD1 /* Assets.xcassets */,
 				BE5A9E9B24F576C700D2D19C /* Fonts */,
 				BE91503224D4B2F7004B0BD1 /* LaunchScreen.storyboard */,
+				BEB9B575250FE3F500DA0CC6 /* GoogleService-Info.plist */,
 				BE91503524D4B2F7004B0BD1 /* Info.plist */,
 				BE91502824D4B2F2004B0BD1 /* Eule.xcdatamodeld */,
 				BE91502F24D4B2F7004B0BD1 /* Preview Content */,
@@ -385,6 +427,7 @@
 			isa = PBXGroup;
 			children = (
 				BE9673DD24EBAA7300AF0AD9 /* HealthKit.framework */,
+				49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -415,11 +458,14 @@
 		BEB8E8F7250EB1C100286678 /* Reminders */ = {
 			isa = PBXGroup;
 			children = (
+				BE60AAA525111F050005B0CE /* BottomSheetView2.swift */,
 				BE91504F24D4CD61004B0BD1 /* RemindersView.swift */,
 				BE8D5348250C24930081206E /* AllReminders.swift */,
 				BEB8E903250EB6DB00286678 /* Upcoming.swift */,
 				BEB8E901250EB6C300286678 /* Medication.swift */,
 				BEB8E8FF250EB69B00286678 /* Checkups.swift */,
+				BEA8844125110BE80009BCE4 /* AddCheckups.swift */,
+				BE60AAA3251117A20005B0CE /* AddReminders.swift */,
 			);
 			path = Reminders;
 			sourceTree = "<group>";
@@ -452,9 +498,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BE91503824D4B2F7004B0BD1 /* Build configuration list for PBXNativeTarget "Eule" */;
 			buildPhases = (
+				F5B19C24A8EAAAA604E0EE65 /* [CP] Check Pods Manifest.lock */,
 				BE91501D24D4B2F2004B0BD1 /* Sources */,
 				BE91501E24D4B2F2004B0BD1 /* Frameworks */,
 				BE91501F24D4B2F2004B0BD1 /* Resources */,
+				387CBA3AED5EEAE553B60707 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -505,12 +553,55 @@
 			files = (
 				BE8E6654250CB2A20090E7E2 /* Preview Assets.xcassets in Resources */,
 				BE91503424D4B2F7004B0BD1 /* LaunchScreen.storyboard in Resources */,
+				BEB9B576250FE3F500DA0CC6 /* GoogleService-Info.plist in Resources */,
 				BE91503124D4B2F7004B0BD1 /* Preview Assets.xcassets in Resources */,
 				BE91502E24D4B2F7004B0BD1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		387CBA3AED5EEAE553B60707 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eule/Pods-Eule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Eule/Pods-Eule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Eule/Pods-Eule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5B19C24A8EAAAA604E0EE65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Eule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BE91501D24D4B2F2004B0BD1 /* Sources */ = {
@@ -527,9 +618,11 @@
 				BE91505024D4CD61004B0BD1 /* RemindersView.swift in Sources */,
 				BE5168F3250BE3A0002450CE /* UnsplashClient.swift in Sources */,
 				BE5168E8250BB395002450CE /* ProfileLinkView.swift in Sources */,
+				BE81D30C2510108F00704D8B /* ExcitedView.swift in Sources */,
 				BE5168DE250BA673002450CE /* Payments.swift in Sources */,
 				BE5168EA250BB529002450CE /* UserSection.swift in Sources */,
 				BE5168E0250BA719002450CE /* LeftView.swift in Sources */,
+				BEB9B578250FEA7800DA0CC6 /* AppRoot.swift in Sources */,
 				BE91504424D4BB33004B0BD1 /* ProfileView.swift in Sources */,
 				BE91504224D4BB2A004B0BD1 /* SocialView.swift in Sources */,
 				BE5168E6250BAC57002450CE /* RightView.swift in Sources */,
@@ -537,6 +630,7 @@
 				BE8E6666250CD7DC0090E7E2 /* ReminderList.swift in Sources */,
 				BE91504E24D4CD58004B0BD1 /* GoalsView.swift in Sources */,
 				BE8D5343250C1C3F0081206E /* BloodView.swift in Sources */,
+				BE77162C2510C8C600891F87 /* HealthcardView.swift in Sources */,
 				BE8D534B250C291C0081206E /* AllGoals.swift in Sources */,
 				BE5168D6250BA15D002450CE /* PhoneNumber.swift in Sources */,
 				BE91503E24D4BB10004B0BD1 /* RecordView.swift in Sources */,
@@ -548,6 +642,7 @@
 				BE8E665F250CC1140090E7E2 /* Card2.swift in Sources */,
 				BEA0801924E4547E00C855AD /* ProductView.swift in Sources */,
 				BEB8E902250EB6C300286678 /* Medication.swift in Sources */,
+				BE81D30A25100FFC00704D8B /* ComingSoonDecider.swift in Sources */,
 				BE91502724D4B2F2004B0BD1 /* SceneDelegate.swift in Sources */,
 				BE8E6663250CCBA10090E7E2 /* BottomSheetView.swift in Sources */,
 				BEE2C07D24FEF14B008B7E23 /* OTPVerification.swift in Sources */,
@@ -572,23 +667,28 @@
 				BEB8E904250EB6DB00286678 /* Upcoming.swift in Sources */,
 				BEA2411D250CFFBC0037B628 /* GoalsCard.swift in Sources */,
 				BE5168F5250BE3A0002450CE /* Endpoint.swift in Sources */,
+				BEA8844225110BE80009BCE4 /* AddCheckups.swift in Sources */,
+				BE60AAA625111F050005B0CE /* BottomSheetView2.swift in Sources */,
 				BEA2411B250CFC410037B628 /* AddCard.swift in Sources */,
 				BE8D5345250C1C730081206E /* AssistanceView.swift in Sources */,
 				BE8E6651250CAE2B0090E7E2 /* AllRecords.swift in Sources */,
 				BE8D534D250C29850081206E /* ReminderModel.swift in Sources */,
 				BE8D535A250C389A0081206E /* LabCard.swift in Sources */,
 				BE91502A24D4B2F2004B0BD1 /* Eule.xcdatamodeld in Sources */,
+				BE7716302510EB1000891F87 /* NameView.swift in Sources */,
 				BE91504024D4BB1F004B0BD1 /* MarketView.swift in Sources */,
 				BEA24121250D23D20037B628 /* AddRecords.swift in Sources */,
 				BE8E6661250CC1140090E7E2 /* CardsView.swift in Sources */,
 				BEB8E900250EB69B00286678 /* Checkups.swift in Sources */,
 				BE5168F4250BE3A0002450CE /* UnsplashImages.swift in Sources */,
+				BE77162E2510DA1E00891F87 /* LockScreen.swift in Sources */,
 				BEA2411F250D01F70037B628 /* AllPrescriptionsView.swift in Sources */,
 				BEA24127250D66AF0037B628 /* ViewRecords.swift in Sources */,
 				BE5168DA250BA197002450CE /* MarketRightView.swift in Sources */,
 				BE5168EC250BBD40002450CE /* UserCard.swift in Sources */,
 				BE5168F6250BE3A0002450CE /* APIClient.swift in Sources */,
 				BE12BADE250FB05A0037AFA6 /* WebViewExtension.swift in Sources */,
+				BE60AAA4251117A20005B0CE /* AddReminders.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -722,6 +822,7 @@
 		};
 		BE91503924D4B2F7004B0BD1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AEC93311CDDE79712FF9D707 /* Pods-Eule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Eule/Eule.entitlements;
@@ -735,7 +836,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hariom.firetodo;
+				PRODUCT_BUNDLE_IDENTIFIER = eule.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -744,6 +845,7 @@
 		};
 		BE91503A24D4B2F7004B0BD1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 426CD69EB60B9FC19055F91F /* Pods-Eule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Eule/Eule.entitlements;
@@ -757,7 +859,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = hariom.firetodo;
+				PRODUCT_BUNDLE_IDENTIFIER = eule.com;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;

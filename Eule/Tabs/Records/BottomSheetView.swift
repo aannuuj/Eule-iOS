@@ -11,6 +11,12 @@ import SwiftUI
 struct BottomSheetView: View {
     @State private var Tapped = false
     @State private var ScanTapped = false
+//    @State private var Title = ""
+//    @State private var CardType1 = ""
+//    @State private var CardIcon1 = ""
+//    @State private var CardType2 = ""
+//    @State private var CardIcon2 = ""
+    
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             Text("Add Documents")

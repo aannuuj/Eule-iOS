@@ -18,7 +18,7 @@ struct UserName: View {
     @State public var DOB = ""
     var size = UIScreen.main.bounds
     var body: some View {
-        NavigationView{
+
             ZStack{
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
                 VStack(alignment: .center, spacing: 10){
@@ -103,7 +103,7 @@ struct UserName: View {
                         
                 }
             }
-        }
+        
     }
     func loadImage() {
         guard let inputImage = inputImage else { return }

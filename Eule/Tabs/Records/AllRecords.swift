@@ -17,36 +17,36 @@ struct AllRecords: View {
         ZStack{
             Color.EuleBackground.edgesIgnoringSafeArea(.all)
             VStack(alignment: .leading){
-                HStack(alignment: .center, spacing: 5){
-                                  HStack(alignment: .center, spacing: 0){
-                                      Button(action: {}){
-                                          Image(systemName: "magnifyingglass")
-                                          TextField("Search", text: $text)
-                                              .foregroundColor(.white)
-                                          
-                                      }
-                                      .padding(.all)
-                                      .frame(width: UIScreen.main.bounds.width/2.5, height: 44)
-                                      .background(Color(.EuleGreen))
-                                      .cornerRadius(10)
-                                      .foregroundColor(.white)
-                                      .padding(.all)
-                                  }
-                                  HStack(alignment: .center, spacing: 30){
-                                      Button(action: {}){
-                                          Image(systemName: "chevron.up")
-                                          Text("Date")
-                                      }
-                                      .frame(width: UIScreen.main.bounds.width/2.5, height: 44)
-                                      .background(Color(.EuleGreen))
-                                      .cornerRadius(10)
-                                      .foregroundColor(.white)
-                                      .padding(.all)
-                                  }
-                              }.padding(.all, 10)
+               
                 ZStack(alignment: .topLeading){
                     ScrollView(showsIndicators: false) {
-                        
+                        HStack(alignment: .center, spacing: 5){
+                                                         HStack(alignment: .center, spacing: 0){
+                                                             Button(action: {}){
+                                                                 Image(systemName: "magnifyingglass")
+                                                                 TextField("Search", text: $text)
+                                                                     .foregroundColor(.white)
+                                                                 
+                                                             }
+                                                             .padding(.all)
+                                                             .frame(width: UIScreen.main.bounds.width/2.5, height: 44)
+                                                             .background(Color(.EuleGreen))
+                                                             .cornerRadius(10)
+                                                             .foregroundColor(.white)
+                                                             .padding(.all)
+                                                         }
+                                                         HStack(alignment: .center, spacing: 30){
+                                                             Button(action: {}){
+                                                                 Image(systemName: "chevron.up")
+                                                                 Text("Date")
+                                                             }
+                                                             .frame(width: UIScreen.main.bounds.width/2.5, height: 44)
+                                                             .background(Color(.EuleGreen))
+                                                             .cornerRadius(10)
+                                                             .foregroundColor(.white)
+                                                             .padding(.all)
+                                                         }
+                                                     }.padding(.all, 10)
                         VStack(alignment: .leading, spacing: 8){
                             Spacer()
                              

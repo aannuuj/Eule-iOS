@@ -17,7 +17,7 @@ struct RecordView: View {
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
                 VStack(alignment: .leading){
                     
-                    ZStack(alignment: .topLeading){
+                   
                         ScrollView(showsIndicators: false) {
                             VStack(alignment: .leading, spacing: 20){
                                 Spacer()
@@ -31,10 +31,10 @@ struct RecordView: View {
                         BottomSheetModal(display: $showBottomSheet) {
                             BottomSheetView()
                                 .onTapGesture {
-                                    
+                                   // dismiss view
                             }
                         }
-                    }
+                    
                 }
             }
                 .navigationBarColor(.EuleBackground)

@@ -26,3 +26,13 @@ struct Goals: Identifiable{
     var goalType: String
     var foregroundColor: Color
 }
+
+struct Report: Identifiable{
+    var id = UUID()
+    var reportName: String
+    var reportTime: String
+    var reportColor: UIColor
+    var reportType: String
+    var foregroundColor: Color
+}
+

@@ -61,8 +61,7 @@ struct ContentView: View {
                     }
                 }
             }
-            .navigationBarColor(.EuleBackground
-            )
+            .navigationBarColor(.EuleBackground)
                 .navigationBarItems(leading: HomeLeftView(),trailing: HomeRightView())
                 .navigationBarTitle("",displayMode: .inline)
             
