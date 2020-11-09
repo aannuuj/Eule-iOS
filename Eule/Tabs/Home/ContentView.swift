@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     
@@ -59,12 +60,15 @@ struct ContentView: View {
                             .padding(.trailing)
                         // make this in a line
                     }
-                }
-            }
+                }            }
             .navigationBarColor(.EuleBackground)
                 .navigationBarItems(leading: HomeLeftView(),trailing: HomeRightView())
                 .navigationBarTitle("",displayMode: .inline)
-            
+           
+            .onAppear(perform: {
+                print("userid  is \(Auth.auth().currentUser?.uid ?? "")")
+                
+            })
         }
     }
 }

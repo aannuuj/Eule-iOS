@@ -9,16 +9,38 @@
 import SwiftUI
 
 struct RecordsCard: View {
-     var labReport:Reminders
+     var labReport:Report
     var body: some View {
         HStack(alignment: .center, spacing: 20){
-            Text(labReport.reminderName)
+            Text(labReport.name)
                 .foregroundColor(.EuleGreen)
                 .font(.EuleHeading)
                 .frame(maxWidth: .infinity, alignment: .leading)
             Spacer()
                 .frame(width: 100)
-            Text(labReport.reminderTime)
+            Text(labReport.time)
+                .foregroundColor(.gray)
+                .font(.EuleTitle)
+             .frame(maxWidth: .infinity, alignment: .trailing)
+        }
+        .padding(.all)
+        .frame(width: 400, height: 55)
+        .background(Color(.white))
+        .cornerRadius(10)
+        
+    }
+}
+struct PrescriptionCard: View {
+     var labReport:Prescription
+    var body: some View {
+        HStack(alignment: .center, spacing: 20){
+            Text(labReport.name)
+                .foregroundColor(.EuleGreen)
+                .font(.EuleHeading)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            Spacer()
+                .frame(width: 100)
+            Text(labReport.time)
                 .foregroundColor(.gray)
                 .font(.EuleTitle)
              .frame(maxWidth: .infinity, alignment: .trailing)
@@ -33,7 +55,7 @@ struct RecordsCard: View {
 
 struct LabCard_Previews: PreviewProvider {
     static var previews: some View {
-        RecordsCard(labReport: reminderList[3])
+       PrescriptionCard(labReport: prescriptionData[3])
             .previewLayout(.sizeThatFits)
     }
 }

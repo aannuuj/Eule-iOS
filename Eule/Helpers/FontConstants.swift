@@ -33,7 +33,7 @@ extension Font{
            return EuleFont(.medium, 12)
        }
     //market place
-   static var EuleMarketCards: Font{
+   static var LargeHeadline: Font{
     return  EuleFont(.heavy, 24)
    }
     static var EuleLabel: Font{

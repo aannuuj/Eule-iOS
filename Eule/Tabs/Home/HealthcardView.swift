@@ -8,29 +8,11 @@
 
 import SwiftUI
 
-//
-//  Healthcard.swift
-//  Eule
-//
-//  Created by Hariom Palkar on 11/09/20.
-//  Copyright © 2020 Hariom Palkar. All rights reserved.
-//
-
-import SwiftUI
-
 struct HealthcardView: View {
-   
-    @State public var BloodGroup = ""
-    @State public var DOB = ""
-    @State public var InsuranceCompany = ""
-    @State public var Allergies = ""
-    @State public var FamilyCondition = ""
-    @State public var SmokingStatus = ""
-    @State public var DrinkingStatus = ""
-    @State public var Medication = ""
-    @State public var Contact1 = ""
-    @State public var Contact2 = ""
+    var healthCard : Healthcard = healthCardData
+    
     @State public var Tapped = false
+    
     var body: some View {
         
         VStack{
@@ -47,7 +29,7 @@ struct HealthcardView: View {
                             .opacity(50)
                             .cornerRadius(15)
                         
-                        VStack(alignment: .leading, spacing: 10){
+                        VStack(alignment: .leading, spacing: 15){
                             
                             Text("Personal Details")
                                 .font(.EuleLabel)
@@ -60,14 +42,14 @@ struct HealthcardView: View {
                                             .font(.EuleTitle)
                                             .foregroundColor(.secondary)
                                             .padding(.all)
+                                                    
                                     )  {
-                                        VStack {
-                                            Text(BloodGroup)
+                                        VStack (alignment: .leading ){
+                                            Text(healthCard.BloodGroup)
                                                 .accentColor(Color.gray)
-                                                .keyboardType(.namePhonePad)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
-                                                .padding(.leading, 15)
+                                                
                                         }
                                     }
                                 } .background(Color.white)
@@ -80,9 +62,8 @@ struct HealthcardView: View {
                                             .padding(.all)
                                     )  {
                                         VStack {
-                                            Text(DOB)
+                                            Text(healthCard.DOB)
                                                 .accentColor(Color.gray)
-                                                .keyboardType(.namePhonePad)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
                                                 .padding(.leading, 15)
@@ -100,9 +81,8 @@ struct HealthcardView: View {
                                         .padding(.all)
                                 )  {
                                     VStack {
-                                        Text(InsuranceCompany)
+                                        Text(healthCard.InsuranceCompany)
                                             .accentColor(Color.gray)
-                                            .keyboardType(.namePhonePad)
                                             .foregroundColor(.EuleGreen)
                                             .font(.EuleLabel)
                                             .padding(.leading, 15)
@@ -120,16 +100,14 @@ struct HealthcardView: View {
                                         .padding(.all)
                                 )  {
                                     VStack {
-                                        HStack{
-                                            Text(Allergies)
+                                     
+                                            Text(healthCard.Allergies)
                                                 .accentColor(Color.gray)
-                                                .keyboardType(.namePhonePad)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
                                                 .padding(.leading, 15)
-                                            Image("Add")
-                                                .padding(.all)
-                                        }
+                                    
+                                        
                                     }
                                 }
                             }
@@ -152,7 +130,7 @@ struct HealthcardView: View {
                                         .padding(.all)
                                 )  {
                                     VStack {
-                                        Text(DOB)
+                                        Text(healthCard.FamilyCondition)
                                             .accentColor(Color.gray)
                                             .keyboardType(.namePhonePad)
                                             .foregroundColor(.EuleGreen)
@@ -172,16 +150,13 @@ struct HealthcardView: View {
                                         .padding(.all)
                                 )  {
                                     VStack {
-                                        HStack{
-                                            Text(DOB)
+                                        
+                                            Text(healthCard.FamilyCondition)
                                                 .accentColor(Color.gray)
-                                                .keyboardType(.namePhonePad)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
                                                 .padding(.leading, 15)
-                                            Image("Add")
-                                                .padding(.all)
-                                        }
+                                          
                                     }
                                 }
                             }
@@ -197,9 +172,8 @@ struct HealthcardView: View {
                                             .padding(.all)
                                     )  {
                                         VStack {
-                                            Text(SmokingStatus)
+                                           Text(healthCard.SmokingStatus)
                                                 .accentColor(Color.gray)
-                                                .keyboardType(.namePhonePad)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
                                                 .padding(.leading, 15)
@@ -215,9 +189,8 @@ struct HealthcardView: View {
                                             .padding(.all)
                                     )  {
                                         VStack {
-                                            Text(DrinkingStatus)
+                                            Text(healthCard.DrinkingStatus)
                                                 .accentColor(Color.gray)
-                                                .keyboardType(.namePhonePad)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
                                                 .padding(.leading, 15)
@@ -234,17 +207,13 @@ struct HealthcardView: View {
                                         .foregroundColor(.secondary)
                                         .padding(.all)
                                 )  {
-                                    VStack {
-                                        HStack{
-                                            Text(Medication)
+                                    VStack {    
+                                            Text(healthCard.Medication)
                                                 .accentColor(Color.gray)
-                                                .keyboardType(.namePhonePad)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
                                                 .padding(.leading, 15)
-                                            Image("Add")
-                                                .padding(.all)
-                                        }
+                                           
                                     }
                                 }
                             }
@@ -270,9 +239,8 @@ struct HealthcardView: View {
                                         .padding(.all)
                                 )  {
                                     VStack {
-                                        Text(Contact1)
+                                        Text(healthCard.Contact1)
                                             .accentColor(Color.gray)
-                                            .keyboardType(.numberPad)
                                             .foregroundColor(.EuleGreen)
                                             .font(.EuleLabel)
                                             .padding(.leading, 15)
@@ -290,13 +258,11 @@ struct HealthcardView: View {
                                         .padding(.all)
                                 )  {
                                     VStack {
-                                        Text(Contact2)
+                                        Text(healthCard.Contact2)
                                             .accentColor(Color.gray)
-                                            .keyboardType(.numberPad)
                                             .foregroundColor(.EuleGreen)
                                             .font(.EuleLabel)
                                             .padding(.leading, 15)
-                                        
                                     }
                                 }
                             }
@@ -306,10 +272,7 @@ struct HealthcardView: View {
                     }
                     .padding(.init(top: 10, leading: 16, bottom: 10, trailing: 16))
                 }
-                
             }
-               
-                               
             .navigationBarColor(.EuleBackground)
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarItems(trailing: Button(action:{

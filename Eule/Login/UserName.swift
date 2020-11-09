@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct UserName: View {
-     @State private var Tapped = false
+    @State private var Tapped = false
     @State private var image: Image?
     @State var Name: String = ""
     @State private var showingImagePicker = false
@@ -18,91 +18,92 @@ struct UserName: View {
     @State public var DOB = ""
     var size = UIScreen.main.bounds
     var body: some View {
-
-            ZStack{
-                Color.EuleBackground.edgesIgnoringSafeArea(.all)
-                VStack(alignment: .center, spacing: 10){
-                    VStack(alignment: .center, spacing: 30){
-                        Spacer()
-                            .frame( height: size.width/10)
-                        Circle()
-                            .frame(width: 130, height: 130, alignment: .center)
-                            .foregroundColor(.gray)
-                            .onTapGesture {
-                                self.showingImagePicker = true
+        NavigationView{
+        ZStack{
+            NavigationLink(destination: MedicalReports(), isActive: $Tapped) { EmptyView() }
+            Color.EuleBackground.edgesIgnoringSafeArea(.all)
+            VStack(alignment: .center, spacing: 10){
+                VStack(alignment: .center, spacing: 30){
+                    Spacer()
+                        .frame( height: size.width/10)
+                    Circle()
+                        .frame(width: 130, height: 130, alignment: .center)
+                        .foregroundColor(.gray)
+                        .onTapGesture {
+                            self.showingImagePicker = true
                         }
-                        TextField("UserName", text: $Name)
-                            .font(.EuleHeading)
-                            .keyboardType(.default)
-                            .textContentType(.name)
-                            .fixedSize()
-                            .accentColor(Color.EuleGreen)
-                            .animation(.linear)
-                        HStack(alignment: .center, spacing: 10){
-                            CustomForm{
-                                CustomSection(header:
-                                    Text("Blood Group")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
-                                )  {
-                                    VStack {
-                                        TextField("B+", text: $BloodGroup)
-                                            .accentColor(Color.gray)
-                                            .keyboardType(.namePhonePad)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
-                                    }
-                                }
-                            } .background(Color.EuleBackground)
-                                .cornerRadius(12)
-                            CustomForm{
-                                CustomSection(header:
-                                    Text("Date of Birth")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
-                                )  {
-                                    VStack {
-                                        TextField("01/01/1997", text: $DOB)
-                                            .accentColor(Color.gray)
-                                            .keyboardType(.namePhonePad)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
-                                    }
+                    TextField("UserName", text: $Name)
+                        .font(.EuleHeading)
+                        .keyboardType(.default)
+                        .textContentType(.name)
+                        .fixedSize()
+                        .accentColor(Color.EuleGreen)
+                        .animation(.linear)
+                    HStack(alignment: .center, spacing: 10){
+                        CustomForm{
+                            CustomSection(header:
+                                            Text("Blood Group")
+                                            .font(.EuleTitle)
+                                            .foregroundColor(.secondary)
+                                            .padding(.all)
+                            )  {
+                                VStack {
+                                    TextField("B+", text: $BloodGroup)
+                                        .accentColor(Color.gray)
+                                        .keyboardType(.namePhonePad)
+                                        .foregroundColor(.EuleGreen)
+                                        .font(.EuleLabel)
+                                        .padding(.leading, 15)
                                 }
                             }
-                            .background(Color.EuleBackground)
-                            .cornerRadius(12)
-                        }.padding(.all)
-                        Spacer()
-                            NavigationLink(destination: MedicalReports(), isActive: $Tapped) { EmptyView() }
-                                                Button(action: {
-                             self.Tapped = true}){
-                            Text("Continue")
-                        }.buttonStyle(EuleGreenButton())
-                        
-                        
-                        
-                    }.background(Color.white)
-                }
-                .cornerRadius(15)
-                .frame(width: (size.width) )
-                .padding(.top, 40)
-                
-                
+                        } .background(Color.EuleBackground)
+                        .cornerRadius(12)
+                        CustomForm{
+                            CustomSection(header:
+                                            Text("Date of Birth")
+                                            .font(.EuleTitle)
+                                            .foregroundColor(.secondary)
+                                            .padding(.all)
+                            )  {
+                                VStack {
+                                    TextField("01/01/1997", text: $DOB)
+                                        .accentColor(Color.gray)
+                                        .keyboardType(.namePhonePad)
+                                        .foregroundColor(.EuleGreen)
+                                        .font(.EuleLabel)
+                                        .padding(.leading, 15)
+                                }
+                            }
+                        }
+                        .background(Color.EuleBackground)
+                        .cornerRadius(12)
+                    }.padding(.all)
+                    Spacer()
+                    
+                    Button(action: {
+                            self.Tapped = true}){
+                        Text("Continue")
+                    }.buttonStyle(EuleGreenButton())
+                    .onTapGesture {
+                        print("hey")
+                        self.Tapped = true
+                    }
+                }.background(Color.white)
             }
-            .navigationBarTitle("", displayMode: .inline)
-            .navigationBarHidden(true)
-            .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-                ImagePicker(image: self.$inputImage)
-                    .accentColor(.EuleGreen)
-                    .onAppear {
-                        
-                }
-            }
+            .cornerRadius(15)
+            .frame(width: (size.width) )
+            .padding(.top, 40)
+            
+            
+        }
+        
+        .navigationBarTitle("", displayMode: .inline)
+        .navigationBarHidden(true)
+        .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
+            ImagePicker(image: self.$inputImage)
+                .accentColor(.EuleGreen)
+        }
+        }
         
     }
     func loadImage() {

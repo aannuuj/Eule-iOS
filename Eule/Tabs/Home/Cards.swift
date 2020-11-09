@@ -30,12 +30,12 @@ struct Card: View {
                 Text(reminder.reminderTime)
                     .font(.EuleDesc)
             }
-            .foregroundColor(reminder.foregroundColor)
+//            .foregroundColor("\(reminder.foregroundColor)")
             }.padding(.all , 10 )
             
         }
         .frame(width: size, height: size)
-        .background(Color(reminder.cardColor))
+//        .background(Color(reminder.cardColor))
     .cornerRadius(10)
     }
 }

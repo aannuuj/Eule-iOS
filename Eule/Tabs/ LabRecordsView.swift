@@ -11,7 +11,7 @@ import SwiftUI
 struct LabRecordsView: View {
     @State private var Tapped = false
     @State var range: Range<Int> = 0..<3
-    var labReports: [Reminders] = reminderList
+    var labReports: [Report] = reportData
     var body: some View {
         VStack(alignment: .leading){
             HStack{

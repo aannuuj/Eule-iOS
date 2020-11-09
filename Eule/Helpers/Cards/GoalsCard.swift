@@ -24,7 +24,7 @@ struct GoalsCard: View {
                        Text(goals.goalTime)
                            .font(.EuleDesc)
                    }
-                   .foregroundColor(goals.foregroundColor)
+                   .foregroundColor(Color.black)
                    }.padding(.all , 10 )
                    
                }
