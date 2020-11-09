@@ -14,6 +14,7 @@ struct ProfileView: View {
     //@Binding private var location : String
     var location = "Pune"
     @State var alert = false
+    @State private var Tapped = false
     var body: some View {
         
         NavigationView{
@@ -50,6 +51,31 @@ struct ProfileView: View {
                                     imageName: "Rewards"
                                 )
                             }
+                            
+                            Button(action: {
+                                self.Tapped = true
+                            }){
+                                VStack(alignment: .leading){
+                                    
+                                    HStack(alignment: .center, spacing: 11){
+                                        Image("Icon")
+                                            
+                                            .frame(width: 40, height: 40)
+                                        Text("App Icon")
+                                            .foregroundColor(.black)
+                                        Spacer()
+                                        Image(systemName: "chevron.right")
+                                            .accentColor(.black)
+                                    } .padding([.leading, .leading, .trailing])
+                                    
+                                }.frame(width: (UIScreen.main.bounds.width - 32), height: 55 )
+                                .background(Color(.white))
+                                .cornerRadius(15)
+                            }
+                            .sheet(isPresented: $Tapped) {
+                                IconView().environmentObject(IconNames())
+                            }
+                            
                             UserSection(title: "") {
                                 ProfileLinkView(
                                     title: "Help & FAQ's",

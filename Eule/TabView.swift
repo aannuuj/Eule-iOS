@@ -102,7 +102,7 @@ struct AppView: View {
                 }
             }
             .tag(4)
-            ProfileView()
+            ProfileView().environmentObject(IconNames())
                 .onTapGesture {
                     self.selection = 5
             }
