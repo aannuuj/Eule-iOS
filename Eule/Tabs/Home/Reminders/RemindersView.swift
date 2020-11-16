@@ -27,7 +27,8 @@ struct RemindersView: View {
                         .font(.EuleTitle)
                         .foregroundColor(.EuleGreen)
                     //card view
-                }
+                }.padding(.leading)
+                .padding(.trailing)
             }
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(alignment: .center, spacing: 8){
@@ -41,7 +42,8 @@ struct RemindersView: View {
             }
             }
             
-        }
+        }.padding(.leading)
+        
     }
 }
 

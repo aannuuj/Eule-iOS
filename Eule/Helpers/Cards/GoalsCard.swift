@@ -29,7 +29,7 @@ struct GoalsCard: View {
                    
                }
                .frame(width: 120, height: 120)
-               .background(Color(goals.goalColor))
+        .background(Color(.white))
            .cornerRadius(10)
            }
     }

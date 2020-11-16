@@ -39,6 +39,8 @@
 		BE53E7242559B745000F75D1 /* KindaBlack@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BE53E7212559B745000F75D1 /* KindaBlack@3x.png */; };
 		BE60AAA4251117A20005B0CE /* AddReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60AAA3251117A20005B0CE /* AddReminders.swift */; };
 		BE60AAA625111F050005B0CE /* BottomSheetView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60AAA525111F050005B0CE /* BottomSheetView2.swift */; };
+		BE6B17AD25629E6000D63A88 /* HomeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B17AC25629E6000D63A88 /* HomeCard.swift */; };
+		BE6B17B025629ECE00D63A88 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6B17AF25629ECE00D63A88 /* Temp.swift */; };
 		BE77162C2510C8C600891F87 /* HealthcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77162B2510C8C600891F87 /* HealthcardView.swift */; };
 		BE77162E2510DA1E00891F87 /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77162D2510DA1E00891F87 /* LockScreen.swift */; };
 		BE7B0677255DB10F0066C8B0 /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B0676255DB10F0066C8B0 /* NetworkCheck.swift */; };
@@ -168,6 +170,8 @@
 		BE5A9EA424F576C700D2D19C /* Inter-Bold-slnt=0.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Inter-Bold-slnt=0.ttf"; sourceTree = "<group>"; };
 		BE60AAA3251117A20005B0CE /* AddReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminders.swift; sourceTree = "<group>"; };
 		BE60AAA525111F050005B0CE /* BottomSheetView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BottomSheetView2.swift; path = ../../../../BottomSheetView2.swift; sourceTree = "<group>"; };
+		BE6B17AC25629E6000D63A88 /* HomeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCard.swift; sourceTree = "<group>"; };
+		BE6B17AF25629ECE00D63A88 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
 		BE71B4B82555D31A000E47D0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		BE71B4BA2555D31A000E47D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		BE77162B2510C8C600891F87 /* HealthcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcardView.swift; sourceTree = "<group>"; };
@@ -445,6 +449,8 @@
 				BEA0D15C2562953100A403CC /* PayUsing.swift */,
 				BEA0D1592562946300A403CC /* Pay.swift */,
 				BE7B068125606ADC0066C8B0 /* BackButton.swift */,
+				BE6B17AC25629E6000D63A88 /* HomeCard.swift */,
+				BE6B17AF25629ECE00D63A88 /* Temp.swift */,
 				BE91502324D4B2F2004B0BD1 /* Eule */,
 				BE91502224D4B2F2004B0BD1 /* Products */,
 				BE9673DC24EBAA7300AF0AD9 /* Frameworks */,
@@ -734,6 +740,7 @@
 				BEA0D15A2562946300A403CC /* Pay.swift in Sources */,
 				BE77162C2510C8C600891F87 /* HealthcardView.swift in Sources */,
 				BE8D534B250C291C0081206E /* AllGoals.swift in Sources */,
+				BE6B17B025629ECE00D63A88 /* Temp.swift in Sources */,
 				BEA0D15D2562953100A403CC /* PayUsing.swift in Sources */,
 				BE5168D6250BA15D002450CE /* PhoneNumber.swift in Sources */,
 				BE91503E24D4BB10004B0BD1 /* RecordView.swift in Sources */,
@@ -743,6 +750,7 @@
 				BE91505224D4D151004B0BD1 /* HomeLeftView.swift in Sources */,
 				BE8D5353250C35C00081206E /*  LabRecordsView.swift in Sources */,
 				BE354AA4255B036E0019E329 /* IconsClass.swift in Sources */,
+				BE6B17AD25629E6000D63A88 /* HomeCard.swift in Sources */,
 				BE91505424D4D1A3004B0BD1 /* HomeRightView.swift in Sources */,
 				BE8E665F250CC1140090E7E2 /* Card2.swift in Sources */,
 				BEA0801924E4547E00C855AD /* ProductView.swift in Sources */,

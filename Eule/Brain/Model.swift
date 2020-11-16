@@ -104,12 +104,20 @@ struct Product : Identifiable, Decodable{
 
 
 // TO FIX
-struct HomeCard : Identifiable, Decodable {
-    var id = UUID()
-    var image: String
-    var title: String
-    var desc: String
-    var link: String
-}
 
+
+
+struct HomeCard: Hashable, CustomStringConvertible {
+    var id: Int
+    
+    
+    let image: String
+    let title: String
+    let link: String
+    let desc: String
+    
+    var description: String {
+        return "\(link), id: \(id)"
+    }
+}
 

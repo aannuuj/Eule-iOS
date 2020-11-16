@@ -29,6 +29,8 @@ struct GoalsView: View {
                          .foregroundColor(.EuleGreen)
                      //card view
                  }
+                              .padding(.leading)
+                              .padding(.trailing)
              }
              ScrollView(.horizontal, showsIndicators: false){
              HStack( spacing: 8){
@@ -41,6 +43,8 @@ struct GoalsView: View {
              }
              }
          }
+         .padding(.leading)
+         
      }
 }
 

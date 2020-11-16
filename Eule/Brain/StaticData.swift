@@ -220,11 +220,71 @@ let reportData = [
         Kind: "Eye"
     )
 ]
-let card = [
+
+
+let homeCard = [
+    
     HomeCard(
+        id: 0,
         image: "BackgroundImage",
         title: "Optamism helps you",
-        desc: "Some some some somesdjakfhg dasfsdnfjge fedkhgfkj",
-        link: "www.eule.in/static"
-    )
+        link: "www.eule.in/static",
+        desc: ""),
+    HomeCard(
+        id: 2,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
+    HomeCard(
+        id: 3,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
+    HomeCard(
+        id: 4,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
+    HomeCard(
+        id: 5,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
+    
+    HomeCard(
+        id: 6,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
+    HomeCard(
+        id: 7,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
+    HomeCard(
+    id: 8,
+    image: "BackgroundImage",
+    title: "Optamism helps you",
+    link: "www.eule.in/static",
+    desc: ""),
+    HomeCard(
+    id: 9,
+    image: "BackgroundImage",
+    title: "Optamism helps you",
+    link: "www.eule.in/static",
+    desc: ""),
+    HomeCard(
+    id: 10,
+    image: "BackgroundImage",
+    title: "Optamism helps you",
+    link: "www.eule.in/static",
+    desc: "")
+    
+    
 ]

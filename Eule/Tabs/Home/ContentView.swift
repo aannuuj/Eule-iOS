@@ -19,12 +19,10 @@ struct ContentView: View {
                 VStack(alignment: .leading){
                     ZStack(alignment: .topLeading){
                         ScrollView(showsIndicators: false) {
-                            VStack(alignment: .leading, spacing: 20){
-                                Spacer()
-                                
-                                // parse data and more cards
-                                
-                                CardsView(image: "BackgroundImage", title: "Optimism may help you live longer", desc: "Can seeing the glass half full help you live longer?")
+                            VStack(alignment: .leading){
+                       Spacer()
+                        .frame(height: 20)
+                                CardsView()
                                 VStack(alignment: .leading, spacing: 10){
                                     
                                     HStack{
@@ -51,7 +49,7 @@ struct ContentView: View {
                                     .frame(width: 400, height: 100)
                                     .cornerRadius(15)
                                 }
-                                .padding(.all, 3)
+                                .padding(.all, 10)
                                 RemindersView()
                                 GoalsView()
                             }

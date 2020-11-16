@@ -11,10 +11,6 @@ import SwiftUI
 struct Card: View {
     var reminder:Reminders
     var size: CGFloat
-//    let type = "FAQ"
-//    let consumptionTime = "FAQ"
-//    let title = "Crocine"
-//    let time = "10:00"
     var body: some View {
         VStack(alignment: .leading, spacing: 10){
             VStack(alignment: .leading, spacing: 10){
@@ -30,12 +26,13 @@ struct Card: View {
                 Text(reminder.reminderTime)
                     .font(.EuleDesc)
             }
-//            .foregroundColor("\(reminder.foregroundColor)")
+                
+            .foregroundColor(.EuleGreen)
             }.padding(.all , 10 )
             
         }
         .frame(width: size, height: size)
-//        .background(Color(reminder.cardColor))
+        .background(Color(.white))
     .cornerRadius(10)
     }
 }
