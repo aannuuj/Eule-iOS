@@ -53,7 +53,7 @@ extension LockScreen{
                        self.isUnlocked = true
                         // authentication has now completed
                     } else {
-                        guard let error = authenticationError  else {
+                        guard authenticationError != nil  else {
                             return
                         }
                     }
@@ -62,7 +62,7 @@ extension LockScreen{
         }
         
         else {
-            guard let error = authenticationError  else {
+            guard authenticationError != nil  else {
                 return
             }
             let alertController = UIAlertController(title: "Your phone looks insecure", message: "We care for your security. You need to setup a phone lock to help us in making it secure.", preferredStyle: .alert)

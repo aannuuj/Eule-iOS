@@ -13,6 +13,7 @@ struct AppView: View {
     @State private var selection = 1
     init() {
         UITabBar.appearance().backgroundColor = UIColor.EuleWhite
+        
     }
     
     var body: some View {

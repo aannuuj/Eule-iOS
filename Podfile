@@ -9,6 +9,5 @@ target 'Eule' do
   
 pod 'Firebase/Analytics'
 pod 'Firebase/Auth'
-pod 'IQKeyboardManagerSwift'
 
 end

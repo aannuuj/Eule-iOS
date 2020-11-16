@@ -11,7 +11,7 @@ import SwiftUI
 
 public enum ServerEnvironment: String, Codable, Hashable {
     public static var active: Self {
-        .debug
+        .production
     }
     case temporary
     case debug
