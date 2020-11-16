@@ -11,6 +11,7 @@ import SwiftUI
 struct Card2: View {
     var imageName = "Scan"
     var title = "Scan Documents"
+    var background : Color = .EuleBackground
     var body: some View {
         
         VStack(alignment: .center, spacing: 20){
@@ -21,7 +22,7 @@ struct Card2: View {
         }
         .cornerRadius(10)
         .frame(width: UIScreen.main.bounds.width/2.5, height: UIScreen.main.bounds.width/2.5)
-        .background(Color(.EuleBackground))
+        .background(background ?? Color(.EuleBackground))
         
     }
 }

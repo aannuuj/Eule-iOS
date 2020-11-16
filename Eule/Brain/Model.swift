@@ -52,6 +52,8 @@ struct User: Codable {
     var profilePicture: String
     var coins: String
     var colour: String
+    var bloodGroup: String
+    var phoneNo: String
 }
 
 struct HealthCard: Codable {
@@ -60,8 +62,8 @@ struct HealthCard: Codable {
     var InsuranceCompany: String
     var Allergies : String
     var FamilyCondition : String
-    var SmokingStatus : String
-    var DrinkingStatus : String
+    var SmokingStatus : Bool
+    var DrinkingStatus : Bool
     var Medication : String
     var Contact1 : String
     var Contact2 : String

@@ -29,7 +29,7 @@ struct PhoneNumber: View {
         ZStack{
             Color.EuleBackground.edgesIgnoringSafeArea(.all)
             VStack(alignment: .center, spacing: 10){
-                VStack(alignment: .center, spacing: 30){
+                VStack(alignment: .center, spacing: 20){
                     Spacer()
                         .frame( height: size.width/20)
                     VStack(alignment: .center, spacing: 15){

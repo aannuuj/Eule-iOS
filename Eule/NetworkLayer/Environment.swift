@@ -11,7 +11,7 @@ import SwiftUI
 
 public enum ServerEnvironment: String, Codable, Hashable {
     public static var active: Self {
-        .debug
+        .production
     }
     case temporary
     case debug
@@ -31,6 +31,35 @@ extension ServerEnvironment {
             return String("https://")
         case .production:
             return String("https://")
+        case .local:
+            return String("https://5519addf453f.ngrok.io")
+        }
+    }
+}
+
+public enum Screen: String, Codable, Hashable {
+    public static var active: Self {
+        .lockscreen
+    }
+   
+    case lockscreen
+    case login
+    case newuser
+    case appScreen
+    case local
+}
+
+extension Screen {
+    public var screen: Any {
+        switch self {
+        case .lockscreen:
+            return LockScreen()
+        case .login:
+            return PhoneNumber()
+        case .newuser:
+            return UserName()
+        case .appScreen:
+            return AppView()
         case .local:
             return String("https://5519addf453f.ngrok.io")
         }

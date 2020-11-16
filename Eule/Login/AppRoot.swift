@@ -11,19 +11,25 @@ import SwiftUI
 import Firebase
 
 struct AppRootView: View {
-    
+    @EnvironmentObject var network : NetworkMonitor
     @State var status = UserDefaults.standard.value(forKey: "status") as? Bool ?? false
     @State var name = UserDefaults.standard.value(forKey: "name") as? Bool ?? false
     var body: some View {
         
-        
         VStack{
-            if status && name {
-//                LockScreen()
-                AppView()
+            if status && name && network.isActive {
+                if ServerEnvironment.active == .debug {
+                    AppView()
+                }
+                else{
+                    LockScreen()
+                }
             }
-            else if status{
+            else if status && network.isActive{
                UserName()
+            }
+            else if !network.isActive{
+                NoInternetView()
             }
             else {
                 NavigationView{

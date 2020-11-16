@@ -63,7 +63,9 @@ extension UIColor {
     static var BloodBackground: UIColor{
         return UIColor(red: 0.945, green: 0.984, blue: 0.98, alpha: 1.00)
           }
-  
+    static var EuleWhite: UIColor{
+        return UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.00)
+          }
  
 }
 

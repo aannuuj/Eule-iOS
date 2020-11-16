@@ -11,6 +11,7 @@
 		BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BAD7250FAA380037AFA6 /* UserName.swift */; };
 		BE12BADC250FABC90037AFA6 /* MedicalReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADB250FABC90037AFA6 /* MedicalReports.swift */; };
 		BE12BADE250FB05A0037AFA6 /* WebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */; };
+		BE354AA4255B036E0019E329 /* IconsClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE354AA3255B036E0019E329 /* IconsClass.swift */; };
 		BE5168D6250BA15D002450CE /* PhoneNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D5250BA15D002450CE /* PhoneNumber.swift */; };
 		BE5168D9250BA197002450CE /* MarketLeftView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D7250BA197002450CE /* MarketLeftView.swift */; };
 		BE5168DA250BA197002450CE /* MarketRightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5168D8250BA197002450CE /* MarketRightView.swift */; };
@@ -40,6 +41,8 @@
 		BE60AAA625111F050005B0CE /* BottomSheetView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE60AAA525111F050005B0CE /* BottomSheetView2.swift */; };
 		BE77162C2510C8C600891F87 /* HealthcardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77162B2510C8C600891F87 /* HealthcardView.swift */; };
 		BE77162E2510DA1E00891F87 /* LockScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE77162D2510DA1E00891F87 /* LockScreen.swift */; };
+		BE7B0677255DB10F0066C8B0 /* NetworkCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B0676255DB10F0066C8B0 /* NetworkCheck.swift */; };
+		BE7B068225606ADC0066C8B0 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7B068125606ADC0066C8B0 /* BackButton.swift */; };
 		BE81D30A25100FFC00704D8B /* ComingSoonDecider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81D30925100FFC00704D8B /* ComingSoonDecider.swift */; };
 		BE81D30C2510108F00704D8B /* ExcitedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE81D30B2510108F00704D8B /* ExcitedView.swift */; };
 		BE890DE9254171CD00F1E6E9 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE890DE8254171CD00F1E6E9 /* Model.swift */; };
@@ -85,6 +88,8 @@
 		BEA0801924E4547E00C855AD /* ProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0801824E4547E00C855AD /* ProductView.swift */; };
 		BEA0801D24E454A300C855AD /* ComingSoonview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0801C24E454A300C855AD /* ComingSoonview.swift */; };
 		BEA0802124E49ABD00C855AD /* EuleButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0802024E49ABD00C855AD /* EuleButtons.swift */; };
+		BEA0D15A2562946300A403CC /* Pay.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0D1592562946300A403CC /* Pay.swift */; };
+		BEA0D15D2562953100A403CC /* PayUsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA0D15C2562953100A403CC /* PayUsing.swift */; };
 		BEA24119250CF99D0037B628 /* TitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA24118250CF99D0037B628 /* TitleView.swift */; };
 		BEA2411B250CFC410037B628 /* AddCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA2411A250CFC410037B628 /* AddCard.swift */; };
 		BEA2411D250CFFBC0037B628 /* GoalsCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA2411C250CFFBC0037B628 /* GoalsCard.swift */; };
@@ -126,6 +131,7 @@
 		BE12BAD7250FAA380037AFA6 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		BE12BADB250FABC90037AFA6 /* MedicalReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalReports.swift; path = ../../MedicalReports.swift; sourceTree = "<group>"; };
 		BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewExtension.swift; path = ../Login/WebViewExtension.swift; sourceTree = "<group>"; };
+		BE354AA3255B036E0019E329 /* IconsClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IconsClass.swift; path = Helpers/IconsClass.swift; sourceTree = "<group>"; };
 		BE5168D5250BA15D002450CE /* PhoneNumber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhoneNumber.swift; path = Eule/Tabs/Market/PhoneNumber.swift; sourceTree = SOURCE_ROOT; };
 		BE5168D7250BA197002450CE /* MarketLeftView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketLeftView.swift; path = Eule/MarketLeftView.swift; sourceTree = SOURCE_ROOT; };
 		BE5168D8250BA197002450CE /* MarketRightView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MarketRightView.swift; path = Eule/MarketRightView.swift; sourceTree = SOURCE_ROOT; };
@@ -166,6 +172,8 @@
 		BE71B4BA2555D31A000E47D0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		BE77162B2510C8C600891F87 /* HealthcardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthcardView.swift; sourceTree = "<group>"; };
 		BE77162D2510DA1E00891F87 /* LockScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LockScreen.swift; path = Tabs/Home/LockScreen.swift; sourceTree = "<group>"; };
+		BE7B0676255DB10F0066C8B0 /* NetworkCheck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCheck.swift; sourceTree = "<group>"; };
+		BE7B068125606ADC0066C8B0 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BackButton.swift; path = Eule/Helpers/BackButton.swift; sourceTree = "<group>"; };
 		BE81D30925100FFC00704D8B /* ComingSoonDecider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonDecider.swift; sourceTree = "<group>"; };
 		BE81D30B2510108F00704D8B /* ExcitedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcitedView.swift; sourceTree = "<group>"; };
 		BE890DE8254171CD00F1E6E9 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -215,6 +223,8 @@
 		BEA0801824E4547E00C855AD /* ProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductView.swift; sourceTree = "<group>"; };
 		BEA0801C24E454A300C855AD /* ComingSoonview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonview.swift; sourceTree = "<group>"; };
 		BEA0802024E49ABD00C855AD /* EuleButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EuleButtons.swift; sourceTree = "<group>"; };
+		BEA0D1592562946300A403CC /* Pay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pay.swift; sourceTree = "<group>"; };
+		BEA0D15C2562953100A403CC /* PayUsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PayUsing.swift; path = Eule/Tabs/Home/PayUsing.swift; sourceTree = "<group>"; };
 		BEA24118250CF99D0037B628 /* TitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleView.swift; sourceTree = "<group>"; };
 		BEA2411A250CFC410037B628 /* AddCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddCard.swift; path = ../../Tabs/Home/AddCard.swift; sourceTree = "<group>"; };
 		BEA2411C250CFFBC0037B628 /* GoalsCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsCard.swift; sourceTree = "<group>"; };
@@ -273,6 +283,7 @@
 			children = (
 				BE5168F1250BE3A0002450CE /* Endpoint.swift */,
 				BE53E6F525598E3C000F75D1 /* Environment.swift */,
+				BE7B0676255DB10F0066C8B0 /* NetworkCheck.swift */,
 			);
 			path = NetworkLayer;
 			sourceTree = "<group>";
@@ -431,6 +442,9 @@
 		BE91501824D4B2F2004B0BD1 = {
 			isa = PBXGroup;
 			children = (
+				BEA0D15C2562953100A403CC /* PayUsing.swift */,
+				BEA0D1592562946300A403CC /* Pay.swift */,
+				BE7B068125606ADC0066C8B0 /* BackButton.swift */,
 				BE91502324D4B2F2004B0BD1 /* Eule */,
 				BE91502224D4B2F2004B0BD1 /* Products */,
 				BE9673DC24EBAA7300AF0AD9 /* Frameworks */,
@@ -453,6 +467,7 @@
 				BE9673DB24EBAA4300AF0AD9 /* Eule.entitlements */,
 				BE91502424D4B2F2004B0BD1 /* AppDelegate.swift */,
 				BE91502624D4B2F2004B0BD1 /* SceneDelegate.swift */,
+				BE354AA3255B036E0019E329 /* IconsClass.swift */,
 				BE53E70225599D99000F75D1 /* IconView.swift */,
 				BEB9B577250FEA7800DA0CC6 /* AppRoot.swift */,
 				BE77162D2510DA1E00891F87 /* LockScreen.swift */,
@@ -705,6 +720,7 @@
 				BE5168E8250BB395002450CE /* ProfileLinkView.swift in Sources */,
 				BE81D30C2510108F00704D8B /* ExcitedView.swift in Sources */,
 				BE5168DE250BA673002450CE /* Payments.swift in Sources */,
+				BE7B0677255DB10F0066C8B0 /* NetworkCheck.swift in Sources */,
 				BE5168EA250BB529002450CE /* UserSection.swift in Sources */,
 				BE5168E0250BA719002450CE /* LeftView.swift in Sources */,
 				BE890DED254171EA00F1E6E9 /* StaticData.swift in Sources */,
@@ -715,14 +731,18 @@
 				BEA24119250CF99D0037B628 /* TitleView.swift in Sources */,
 				BE91504E24D4CD58004B0BD1 /* GoalsView.swift in Sources */,
 				BE8D5343250C1C3F0081206E /* BloodView.swift in Sources */,
+				BEA0D15A2562946300A403CC /* Pay.swift in Sources */,
 				BE77162C2510C8C600891F87 /* HealthcardView.swift in Sources */,
 				BE8D534B250C291C0081206E /* AllGoals.swift in Sources */,
+				BEA0D15D2562953100A403CC /* PayUsing.swift in Sources */,
 				BE5168D6250BA15D002450CE /* PhoneNumber.swift in Sources */,
 				BE91503E24D4BB10004B0BD1 /* RecordView.swift in Sources */,
+				BE7B068225606ADC0066C8B0 /* BackButton.swift in Sources */,
 				BE5168DC250BA3D4002450CE /* Healthcard.swift in Sources */,
 				BE91505824D4E4BA004B0BD1 /* NavigationBarColour.swift in Sources */,
 				BE91505224D4D151004B0BD1 /* HomeLeftView.swift in Sources */,
 				BE8D5353250C35C00081206E /*  LabRecordsView.swift in Sources */,
+				BE354AA4255B036E0019E329 /* IconsClass.swift in Sources */,
 				BE91505424D4D1A3004B0BD1 /* HomeRightView.swift in Sources */,
 				BE8E665F250CC1140090E7E2 /* Card2.swift in Sources */,
 				BEA0801924E4547E00C855AD /* ProductView.swift in Sources */,

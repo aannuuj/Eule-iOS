@@ -25,12 +25,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = AppRootView().environment(\.managedObjectContext, context)
+        let monitor = NetworkMonitor()
+        let contentView = AppRootView().environmentObject(monitor)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(IconNames()))
+            window.rootViewController = UIHostingController(rootView: contentView)
             self.window = window
             window.makeKeyAndVisible()
         }
@@ -77,36 +78,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
-
-class IconNames: ObservableObject {
-    var iconNames: [String?] = [nil]
-    @Published var currentIndex = 0
-    
-    init() {
-        getAlternateIconNames()
-        
-        if let currentIcon = UIApplication.shared.alternateIconName{
-            self.currentIndex = iconNames.firstIndex(of: currentIcon) ?? 0
-        }
-
-    }
-    
-    func getAlternateIconNames()
-    {
-        if let icons = Bundle.main.object(forInfoDictionaryKey: "CFBundleIcons") as? [String: Any],
-            let alternateIcons = icons["CFBundleAlternateIcons"] as? [String: Any] {
-                 
-             for (_, value) in alternateIcons{
-
-                 guard let iconList = value as? Dictionary<String,Any> else{return}
-                 guard let iconFiles = iconList["CFBundleIconFiles"] as? [String]
-                     else{return}
-                     
-                 guard let icon = iconFiles.first else{return}
-                 iconNames.append(icon)
-    
-             }
-        }
-    }
 }

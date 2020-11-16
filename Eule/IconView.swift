@@ -40,12 +40,10 @@ struct IconView: View {
                                     print("Success!")
                                 }
                             }
-                        
                     }
                 }
 
             } .navigationBarTitle("AppIcon", displayMode: .inline)
-
         }
     }
 }

@@ -11,6 +11,7 @@ import SwiftUI
 struct UserName: View {
     @State private var Tapped = false
     @State private var image: Image?
+    @State var user: User = userData
     @State var Name: String = ""
     @State private var showingImagePicker = false
     @State private var inputImage: UIImage?
@@ -26,13 +27,11 @@ struct UserName: View {
                 VStack(alignment: .center, spacing: 30){
                     Spacer()
                         .frame( height: size.width/10)
-                    Circle()
-                        .frame(width: 130, height: 130, alignment: .center)
-                        .foregroundColor(.gray)
+                   Image(systemName: "Person.fill" )
                         .onTapGesture {
                             self.showingImagePicker = true
                         }
-                    TextField("UserName", text: $Name)
+                    TextField("UserName", text: $user.name)
                         .font(.EuleHeading)
                         .keyboardType(.default)
                         .textContentType(.name)
@@ -48,7 +47,7 @@ struct UserName: View {
                                             .padding(.all)
                             )  {
                                 VStack {
-                                    TextField("B+", text: $BloodGroup)
+                                    TextField("B+", text: $user.bloodGroup)
                                         .accentColor(Color.gray)
                                         .keyboardType(.namePhonePad)
                                         .foregroundColor(.EuleGreen)
@@ -113,8 +112,3 @@ struct UserName: View {
     
 }
 
-struct UserName_Previews: PreviewProvider {
-    static var previews: some View {
-        UserName()
-    }
-}

@@ -98,18 +98,20 @@ let userData: User =
         color: "\(UIColor.orange)",
         profilePicture: "User.Image",
         coins: "5682",
-        colour: "\(Color.black)"
+        colour: "\(Color.black)",
+        bloodGroup: "",
+        phoneNo: ""
     )
 
-let healthCardData: Healthcard =
-    Healthcard(
+let healthCardData: HealthCard =
+    HealthCard(
         BloodGroup: "B+",
         DOB: "25/6/2000",
         InsuranceCompany: "Tata",
         Allergies: "586",
         FamilyCondition: "gd456",
-        SmokingStatus: "gfd",
-        DrinkingStatus: "dfgh",
+        SmokingStatus: false,
+        DrinkingStatus: false,
         Medication: "dh",
         Contact1: "5446854",
         Contact2: "324156"

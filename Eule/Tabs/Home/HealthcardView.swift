@@ -9,10 +9,13 @@
 import SwiftUI
 
 struct HealthcardView: View {
-    var healthCard : Healthcard = healthCardData
-    
+    @State var healthCard : HealthCard = healthCardData
     @State public var Tapped = false
     
+    @State public var SmokingStatus = false
+    
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
+    @GestureState private var dragOffset = CGSize.zero
     var body: some View {
         
         VStack{
@@ -25,9 +28,9 @@ struct HealthcardView: View {
                             Image("")
                             
                         }.frame(width: (UIScreen.main.bounds.width - 32), height: (UIScreen.main.bounds.height/4) )
-                            .background(Color(.gray))
-                            .opacity(50)
-                            .cornerRadius(15)
+                        .background(Color(.gray))
+                        .opacity(50)
+                        .cornerRadius(15)
                         
                         VStack(alignment: .leading, spacing: 15){
                             
@@ -35,38 +38,41 @@ struct HealthcardView: View {
                                 .font(.EuleLabel)
                                 .foregroundColor(.black)
                             
-                            HStack(alignment: .center, spacing: 10){
+                            HStack(alignment: .center, spacing: 20){
                                 CustomForm{
                                     CustomSection(header:
-                                        Text("Blood Group")
-                                            .font(.EuleTitle)
-                                            .foregroundColor(.secondary)
-                                            .padding(.all)
-                                                    
+                                                    Text("Blood Group")
+                                                    .font(.EuleTitle)
+                                                    .foregroundColor(.secondary)
+                                                    .padding(.all)
+                                                  
                                     )  {
-                                        VStack (alignment: .leading ){
+                                        HStack(){
                                             Text(healthCard.BloodGroup)
                                                 .accentColor(Color.gray)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
-                                                
+                                                .padding(.leading, 15)
+                                            Spacer()
+                                            
                                         }
                                     }
                                 } .background(Color.white)
-                                    .cornerRadius(12)
+                                .cornerRadius(12)
                                 CustomForm{
                                     CustomSection(header:
-                                        Text("Date of Birth")
-                                            .font(.EuleTitle)
-                                            .foregroundColor(.secondary)
-                                            .padding(.all)
+                                                    Text("Date of Birth")
+                                                    .font(.EuleTitle)
+                                                    .foregroundColor(.secondary)
+                                                    .padding(.all)
                                     )  {
-                                        VStack {
+                                        HStack() {
                                             Text(healthCard.DOB)
                                                 .accentColor(Color.gray)
                                                 .foregroundColor(.EuleGreen)
                                                 .font(.EuleLabel)
                                                 .padding(.leading, 15)
+                                            Spacer()
                                         }
                                     }
                                 }
@@ -75,17 +81,18 @@ struct HealthcardView: View {
                             }
                             CustomForm{
                                 CustomSection(header:
-                                    Text("Insuarance Company")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
+                                                Text("Insuarance Company")
+                                                .font(.EuleTitle)
+                                                .foregroundColor(.secondary)
+                                                .padding(.all)
                                 )  {
-                                    VStack {
+                                    HStack() {
                                         Text(healthCard.InsuranceCompany)
                                             .accentColor(Color.gray)
                                             .foregroundColor(.EuleGreen)
                                             .font(.EuleLabel)
                                             .padding(.leading, 15)
+                                        Spacer()
                                         
                                     }
                                 }
@@ -94,19 +101,19 @@ struct HealthcardView: View {
                             .cornerRadius(12)
                             CustomForm{
                                 CustomSection(header:
-                                    Text("Allergies")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
+                                                Text("Allergies")
+                                                .font(.EuleTitle)
+                                                .foregroundColor(.secondary)
+                                                .padding(.all)
                                 )  {
-                                    VStack {
-                                     
-                                            Text(healthCard.Allergies)
-                                                .accentColor(Color.gray)
-                                                .foregroundColor(.EuleGreen)
-                                                .font(.EuleLabel)
-                                                .padding(.leading, 15)
-                                    
+                                    HStack() {
+                                        
+                                        Text(healthCard.Allergies)
+                                            .accentColor(Color.gray)
+                                            .foregroundColor(.EuleGreen)
+                                            .font(.EuleLabel)
+                                            .padding(.leading, 15)
+                                        Spacer()
                                         
                                     }
                                 }
@@ -124,18 +131,19 @@ struct HealthcardView: View {
                             
                             CustomForm{
                                 CustomSection(header:
-                                    Text("Familty Conditions")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
+                                                Text("Familty Conditions")
+                                                .font(.EuleTitle)
+                                                .foregroundColor(.secondary)
+                                                .padding(.all)
                                 )  {
-                                    VStack {
+                                    HStack() {
                                         Text(healthCard.FamilyCondition)
                                             .accentColor(Color.gray)
                                             .keyboardType(.namePhonePad)
                                             .foregroundColor(.EuleGreen)
                                             .font(.EuleLabel)
                                             .padding(.leading, 15)
+                                        Spacer()
                                         
                                     }
                                 }
@@ -144,19 +152,20 @@ struct HealthcardView: View {
                             .cornerRadius(12)
                             CustomForm{
                                 CustomSection(header:
-                                    Text("Personal Conditions")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
+                                                Text("Personal Conditions")
+                                                .font(.EuleTitle)
+                                                .foregroundColor(.secondary)
+                                                .padding(.all)
                                 )  {
-                                    VStack {
+                                    HStack() {
                                         
-                                            Text(healthCard.FamilyCondition)
-                                                .accentColor(Color.gray)
-                                                .foregroundColor(.EuleGreen)
-                                                .font(.EuleLabel)
-                                                .padding(.leading, 15)
-                                          
+                                        Text(healthCard.FamilyCondition)
+                                            .accentColor(Color.gray)
+                                            .foregroundColor(.EuleGreen)
+                                            .font(.EuleLabel)
+                                            .padding(.leading, 15)
+                                        Spacer()
+                                        
                                     }
                                 }
                             }
@@ -166,34 +175,43 @@ struct HealthcardView: View {
                             HStack(alignment: .center, spacing: 10){
                                 CustomForm{
                                     CustomSection(header:
-                                        Text("Smoking Status")
-                                            .font(.EuleTitle)
-                                            .foregroundColor(.secondary)
-                                            .padding(.all)
+                                                    Text("Smoking Status")
+                                                    .font(.EuleTitle)
+                                                    .foregroundColor(.secondary)
+                                                    .padding(.all)
                                     )  {
-                                        VStack {
-                                           Text(healthCard.SmokingStatus)
-                                                .accentColor(Color.gray)
-                                                .foregroundColor(.EuleGreen)
-                                                .font(.EuleLabel)
-                                                .padding(.leading, 15)
+                                        HStack() {
+                                            Toggle(isOn: $SmokingStatus) {
+                                                        
+                                                        }.padding()
+                                            .foregroundColor(.EuleGreen)
+                                            .toggleStyle(SwitchToggleStyle())
+                                            
+//                                            Text(healthCard.SmokingStatus)
+//                                                .accentColor(Color.gray)
+//                                                .foregroundColor(.EuleGreen)
+//                                                .font(.EuleLabel)
+//                                                .padding(.leading, 15)
+                                            Spacer()
                                         }
+                                        
                                     }
                                 } .background(Color.white)
-                                    .cornerRadius(12)
+                                .cornerRadius(12)
                                 CustomForm{
                                     CustomSection(header:
-                                        Text("Drinking Status")
-                                            .font(.EuleTitle)
-                                            .foregroundColor(.secondary)
-                                            .padding(.all)
+                                                    Text("Drinking Status")
+                                                    .font(.EuleTitle)
+                                                    .foregroundColor(.secondary)
+                                                    .padding(.all)
                                     )  {
-                                        VStack {
-                                            Text(healthCard.DrinkingStatus)
-                                                .accentColor(Color.gray)
-                                                .foregroundColor(.EuleGreen)
-                                                .font(.EuleLabel)
-                                                .padding(.leading, 15)
+                                        HStack() {
+//                                            Text(healthCard.DrinkingStatus)
+//                                                .accentColor(Color.gray)
+//                                                .foregroundColor(.EuleGreen)
+//                                                .font(.EuleLabel)
+//                                                .padding(.leading, 15)
+                                            Spacer()
                                         }
                                     }
                                 }
@@ -202,18 +220,18 @@ struct HealthcardView: View {
                             }
                             CustomForm{
                                 CustomSection(header:
-                                    Text("Current Medications")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
+                                                Text("Current Medications")
+                                                .font(.EuleTitle)
+                                                .foregroundColor(.secondary)
+                                                .padding(.all)
                                 )  {
-                                    VStack {    
-                                            Text(healthCard.Medication)
-                                                .accentColor(Color.gray)
-                                                .foregroundColor(.EuleGreen)
-                                                .font(.EuleLabel)
-                                                .padding(.leading, 15)
-                                           
+                                    HStack() {
+                                        Text(healthCard.Medication)
+                                            .accentColor(Color.gray)
+                                            .foregroundColor(.EuleGreen)
+                                            .font(.EuleLabel)
+                                            .padding(.leading, 15)
+                                        Spacer()
                                     }
                                 }
                             }
@@ -223,7 +241,9 @@ struct HealthcardView: View {
                         
                         // emergancy contacts
                         // design changes?
-                         NavigationLink(destination: Healthcard(), isActive: $Tapped) { EmptyView() }
+                        // implement for loop
+                        NavigationLink(destination: Healthcard(), isActive: $Tapped) { EmptyView() }
+                        
                         VStack(alignment: .leading, spacing: 10){
                             
                             Text("Emergancy Contacts")
@@ -233,18 +253,18 @@ struct HealthcardView: View {
                             
                             CustomForm{
                                 CustomSection(header:
-                                    Text("Name")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
+                                                Text("Name")
+                                                .font(.EuleTitle)
+                                                .foregroundColor(.secondary)
+                                                .padding(.all)
                                 )  {
-                                    VStack {
+                                    HStack {
                                         Text(healthCard.Contact1)
                                             .accentColor(Color.gray)
                                             .foregroundColor(.EuleGreen)
                                             .font(.EuleLabel)
                                             .padding(.leading, 15)
-                                        
+                                        Spacer()
                                     }
                                 }
                             }
@@ -252,17 +272,18 @@ struct HealthcardView: View {
                             .cornerRadius(12)
                             CustomForm{
                                 CustomSection(header:
-                                    Text("Name")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
+                                                Text("Name")
+                                                .font(.EuleTitle)
+                                                .foregroundColor(.secondary)
+                                                .padding(.all)
                                 )  {
-                                    VStack {
+                                    HStack() {
                                         Text(healthCard.Contact2)
                                             .accentColor(Color.gray)
                                             .foregroundColor(.EuleGreen)
                                             .font(.EuleLabel)
                                             .padding(.leading, 15)
+                                        Spacer()
                                     }
                                 }
                             }
@@ -275,15 +296,29 @@ struct HealthcardView: View {
             }
             .navigationBarColor(.EuleBackground)
             .navigationBarTitle("", displayMode: .inline)
-            .navigationBarItems(trailing: Button(action:{
-                   self.Tapped = true
+            .navigationBarBackButtonHidden(true)
+            .navigationBarItems(leading: BackButton(label: "Health"),trailing: Button(action:{
+                self.Tapped = true
             }){
                 Image("Edit")
-                .frame(width: 44, height: 44)
+                    .frame(width: 44, height: 44)
             })
+            
+            .gesture(
+                DragGesture()
+                    .updating(
+                        $dragOffset, body: { (value, state, transaction) in
+                            if(value.startLocation.x < 20 && value.translation.width > 100) {
+                                self.mode.wrappedValue.dismiss()
+                            }
+                        }
+                    )
+            )
         }
     }
+    
 }
+
 
 
 struct HealthcardView_Previews: PreviewProvider {
