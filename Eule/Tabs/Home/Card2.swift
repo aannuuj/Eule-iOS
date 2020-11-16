@@ -21,8 +21,9 @@ struct Card2: View {
                 .foregroundColor(.gray)
         }
         .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.05),radius: 5)
         .frame(width: UIScreen.main.bounds.width/2.5, height: UIScreen.main.bounds.width/2.5)
-        .background(background ?? Color(.EuleBackground))
+        .background(background)
         
     }
 }

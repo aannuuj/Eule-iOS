@@ -34,6 +34,7 @@ struct AppRootView: View {
             else {
                 NavigationView{
                     PhoneNumber()
+//                    AppView()
                 }
             }
         }.onAppear {

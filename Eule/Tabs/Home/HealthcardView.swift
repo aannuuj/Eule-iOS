@@ -34,270 +34,152 @@ struct HealthcardView: View {
                         
                         VStack(alignment: .leading, spacing: 15){
                             
-                            Text("Personal Details")
-                                .font(.EuleLabel)
-                                .foregroundColor(.black)
-                            
+                            HealthCardHeaderView(title: "Personal Details")
+                
                             HStack(alignment: .center, spacing: 20){
                                 CustomForm{
                                     CustomSection(header:
                                                     Text("Blood Group")
-                                                    .font(.EuleTitle)
-                                                    .foregroundColor(.secondary)
-                                                    .padding(.all)
-                                                  
                                     )  {
                                         HStack(){
                                             Text(healthCard.BloodGroup)
-                                                .accentColor(Color.gray)
-                                                .foregroundColor(.EuleGreen)
-                                                .font(.EuleLabel)
-                                                .padding(.leading, 15)
-                                            Spacer()
-                                            
-                                        }
-                                    }
-                                } .background(Color.white)
-                                .cornerRadius(12)
-                                CustomForm{
-                                    CustomSection(header:
-                                                    Text("Date of Birth")
-                                                    .font(.EuleTitle)
-                                                    .foregroundColor(.secondary)
-                                                    .padding(.all)
-                                    )  {
-                                        HStack() {
-                                            Text(healthCard.DOB)
-                                                .accentColor(Color.gray)
-                                                .foregroundColor(.EuleGreen)
-                                                .font(.EuleLabel)
-                                                .padding(.leading, 15)
                                             Spacer()
                                         }
                                     }
                                 }
-                                .background(Color.white)
-                                .cornerRadius(12)
+                                CustomForm{
+                                    CustomSection(header:
+                                                    Text("Date of Birth")
+                                    )  {
+                                        HStack() {
+                                            Text(healthCard.DOB)
+                                            Spacer()
+                                        }
+                                    }
+                                }
                             }
                             CustomForm{
                                 CustomSection(header:
                                                 Text("Insuarance Company")
-                                                .font(.EuleTitle)
-                                                .foregroundColor(.secondary)
-                                                .padding(.all)
                                 )  {
                                     HStack() {
                                         Text(healthCard.InsuranceCompany)
-                                            .accentColor(Color.gray)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
                                         Spacer()
-                                        
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
+                            
                             CustomForm{
                                 CustomSection(header:
                                                 Text("Allergies")
-                                                .font(.EuleTitle)
-                                                .foregroundColor(.secondary)
-                                                .padding(.all)
                                 )  {
                                     HStack() {
-                                        
                                         Text(healthCard.Allergies)
-                                            .accentColor(Color.gray)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
                                         Spacer()
-                                        
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
-                        }
-                        
-                        // medical documents
-                        VStack(alignment: .leading, spacing: 10){
                             
-                            Text("Medical Documents")
-                                .font(.EuleLabel)
-                                .foregroundColor(.black)
+                            HealthCardHeaderView(title: "Medical Documents")
                             
                             CustomForm{
                                 CustomSection(header:
                                                 Text("Familty Conditions")
-                                                .font(.EuleTitle)
-                                                .foregroundColor(.secondary)
-                                                .padding(.all)
                                 )  {
                                     HStack() {
                                         Text(healthCard.FamilyCondition)
-                                            .accentColor(Color.gray)
                                             .keyboardType(.namePhonePad)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
                                         Spacer()
-                                        
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
                             CustomForm{
                                 CustomSection(header:
                                                 Text("Personal Conditions")
-                                                .font(.EuleTitle)
-                                                .foregroundColor(.secondary)
-                                                .padding(.all)
                                 )  {
                                     HStack() {
-                                        
                                         Text(healthCard.FamilyCondition)
-                                            .accentColor(Color.gray)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
                                         Spacer()
-                                        
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
+                            
                             // add switch
                             HStack(alignment: .center, spacing: 10){
                                 CustomForm{
                                     CustomSection(header:
                                                     Text("Smoking Status")
-                                                    .font(.EuleTitle)
-                                                    .foregroundColor(.secondary)
-                                                    .padding(.all)
+                                                  
                                     )  {
                                         HStack() {
                                             Toggle(isOn: $SmokingStatus) {
-                                                        
-                                                        }.padding()
+                                                
+                                            }.padding()
                                             .foregroundColor(.EuleGreen)
                                             .toggleStyle(SwitchToggleStyle())
-                                            
-//                                            Text(healthCard.SmokingStatus)
-//                                                .accentColor(Color.gray)
-//                                                .foregroundColor(.EuleGreen)
-//                                                .font(.EuleLabel)
-//                                                .padding(.leading, 15)
+                                        
                                             Spacer()
                                         }
                                         
                                     }
-                                } .background(Color.white)
-                                .cornerRadius(12)
+                                }
                                 CustomForm{
                                     CustomSection(header:
                                                     Text("Drinking Status")
-                                                    .font(.EuleTitle)
-                                                    .foregroundColor(.secondary)
-                                                    .padding(.all)
                                     )  {
                                         HStack() {
-//                                            Text(healthCard.DrinkingStatus)
-//                                                .accentColor(Color.gray)
-//                                                .foregroundColor(.EuleGreen)
-//                                                .font(.EuleLabel)
-//                                                .padding(.leading, 15)
                                             Spacer()
                                         }
                                     }
                                 }
-                                .background(Color.white)
-                                .cornerRadius(12)
                             }
                             CustomForm{
                                 CustomSection(header:
                                                 Text("Current Medications")
-                                                .font(.EuleTitle)
-                                                .foregroundColor(.secondary)
-                                                .padding(.all)
+                                              
                                 )  {
                                     HStack() {
                                         Text(healthCard.Medication)
-                                            .accentColor(Color.gray)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
                                         Spacer()
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
                         }
-                        
                         // emergancy contacts
                         // design changes?
                         // implement for loop
                         NavigationLink(destination: Healthcard(), isActive: $Tapped) { EmptyView() }
-                        
                         VStack(alignment: .leading, spacing: 10){
-                            
-                            Text("Emergancy Contacts")
-                                .font(.EuleLabel)
-                                .foregroundColor(.black)
-                            
-                            
+                            HealthCardHeaderView(title: "Emergancy Contacts")
                             CustomForm{
                                 CustomSection(header:
                                                 Text("Name")
-                                                .font(.EuleTitle)
-                                                .foregroundColor(.secondary)
-                                                .padding(.all)
                                 )  {
                                     HStack {
                                         Text(healthCard.Contact1)
-                                            .accentColor(Color.gray)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
                                         Spacer()
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
                             CustomForm{
                                 CustomSection(header:
                                                 Text("Name")
-                                                .font(.EuleTitle)
-                                                .foregroundColor(.secondary)
-                                                .padding(.all)
                                 )  {
                                     HStack() {
                                         Text(healthCard.Contact2)
-                                            .accentColor(Color.gray)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
                                         Spacer()
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
-                        }
+                        }.padding(.top, 20)
                     }
-                    .padding(.init(top: 10, leading: 16, bottom: 10, trailing: 16))
+                    .padding(.init(top: 20, leading: 16, bottom: 10, trailing: 16))
                 }
             }
             .navigationBarColor(.EuleBackground)
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
-            .navigationBarItems(leading: BackButton(label: "Health"),trailing: Button(action:{
+            .navigationBarItems(leading: BackButton(label: "Healthcard"),trailing: Button(action:{
                 self.Tapped = true
             }){
                 Image("Edit")

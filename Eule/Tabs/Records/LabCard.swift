@@ -27,6 +27,7 @@ struct RecordsCard: View {
         .frame(width: 400, height: 55)
         .background(Color(.white))
         .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.05),radius: 5)
         
     }
 }
@@ -49,6 +50,7 @@ struct PrescriptionCard: View {
         .frame(width: 400, height: 55)
         .background(Color(.white))
         .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.05),radius: 5)
         
     }
 }

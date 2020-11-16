@@ -37,8 +37,9 @@ struct GoalsView: View {
                  // make a list of cards and fetch
                     ForEach(goals) { item in
                         GoalsCard(goals: item)
-                    }
+                                  }
                 AddCard()
+                 
                 
              }
              }

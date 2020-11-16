@@ -55,23 +55,29 @@ struct ProfileView: View {
                             Button(action: {
                                 self.Tapped = true
                             }){
-                                VStack(alignment: .leading){
-                                    
-                                    HStack(alignment: .center, spacing: 11){
-                                        Image("Icon")
-                                            
-                                            .frame(width: 40, height: 40)
+                                
+                                
+                                HStack(alignment: .center, spacing: 10){
+                                    Image(systemName: "flame")
+                                        .accentColor(.black)
+                                        .frame(width: 40, height: 40)
+                                        .padding(.leading, 3)
+                                    VStack(alignment: .leading, spacing: 8){
                                         Text("App Icon")
-                                            .foregroundColor(.black)
-                                        Spacer()
-                                        Image(systemName: "chevron.right")
-                                            .accentColor(.black)
-                                    } .padding([.leading, .leading, .trailing])
-                                    
-                                }.frame(width: (UIScreen.main.bounds.width - 32), height: 55 )
-                                .background(Color(.white))
-                                .cornerRadius(15)
-                            }
+                                            .font(.EuleLabel)
+                                            .foregroundColor(.primary)
+                                        Text("Select your fav icon")
+                                            .font(.EuleTitle)
+                                            .foregroundColor(.secondary)
+                                    }
+                                    Spacer()
+                                    Image(systemName: "chevron.right")
+                                        .accentColor(.black)
+                                }
+                                
+                            }.frame(width: (UIScreen.main.bounds.width - 32), height: 55 )
+                            .background(Color(.white))
+                            .cornerRadius(15)
                             .sheet(isPresented: $Tapped) {
                                 IconView().environmentObject(IconNames())
                             }

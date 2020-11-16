@@ -31,6 +31,7 @@ struct GoalsCard: View {
                .frame(width: 120, height: 120)
         .background(Color(.white))
            .cornerRadius(10)
+        .shadow(color: Color.black.opacity(0.05),radius: 5)
            }
     }
 

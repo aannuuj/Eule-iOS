@@ -25,6 +25,7 @@ struct PayUsing: View {
                     Text("Paying to \(Name)")
                         .frame( alignment: .leading)
                 }
+                .shadow(color: Color.black.opacity(0.05),radius: 5)
                 .frame(width: UIScreen.main.bounds.width - 30, height: 55)
                 .background(Color.white)
                 .cornerRadius(15)
@@ -36,19 +37,24 @@ struct PayUsing: View {
                         HStack(alignment: .center, spacing: 25){
                             ForEach(0 ..< 10) { item in
                                 VStack(alignment: .center, spacing: 20){
+                                    ZStack(alignment: .center){
                                     Circle()
                                         .size(width: 80, height: 80)
                                         .foregroundColor(.white)
+                                        .shadow(color: Color.black.opacity(0.05),radius: 5)
+                                     Image("GPay")
+                                        .frame(width: 80, height: 80)
+                                    }
                                     Text("GPay")
                                         .foregroundColor(.gray)
                                         .font(.EuleTitle)
                                         .multilineTextAlignment(.center)
                                 }
-                                .frame(width: 80, height: 100, alignment: .center)
+                                .frame(width: 80, height: 120, alignment: .center)
                                 
                             }
                             
-                        }.frame(height: 100)
+                        }.frame(height: 120)
                     }
                 }.padding(.leading, 16.0)
                 VStack(alignment: .leading, spacing: 10){

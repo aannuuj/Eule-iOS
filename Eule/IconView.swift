@@ -11,14 +11,15 @@ import SwiftUI
 
 struct IconView: View {
 @EnvironmentObject var iconSettings : IconNames
+    @Environment(\.presentationMode) var mode: Binding<PresentationMode>
 
     var body: some View {
         NavigationView {
             Form {
-                    Picker(selection: $iconSettings.currentIndex, label: Text("Icon"))
+                    Picker(selection: $iconSettings.currentIndex, label: Text("Current Icon"))
                     {
                         ForEach(0..<iconSettings.iconNames.count) { index in
-                            HStack{
+                            HStack(alignment: .center){
                                 Image(uiImage: UIImage(named: self.iconSettings.iconNames[index] ?? "Default") ?? UIImage())
                                     .renderingMode(.original) //important
                                    
@@ -44,6 +45,9 @@ struct IconView: View {
                 }
 
             } .navigationBarTitle("AppIcon", displayMode: .inline)
+            .navigationBarItems(leading: Button(action: {self.mode.wrappedValue.dismiss()}){
+                Image(systemName: "multiply")
+            }.frame(width: 44, height: 44))
         }
     }
 }

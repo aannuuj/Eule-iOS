@@ -35,10 +35,8 @@ struct RemindersView: View {
                 // make a list of cards and fetch
                 ForEach(reminders) { item in
                     Card(reminder: item, size: 120)
-//                     Text("Hi")
                 }
                     AddCard()
-                    
             }
             }
             

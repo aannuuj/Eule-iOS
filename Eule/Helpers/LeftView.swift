@@ -10,7 +10,7 @@ import SwiftUI
 
 struct LeftView: View {
     @State private var showBottomSheet = false
-  let ButtonImage : String
+  let ButtonImage : String?
     let ViewHeading : String
 
     var body: some View {
@@ -20,7 +20,7 @@ struct LeftView: View {
                  Button(action:{
                      self.showBottomSheet.toggle()
                  }){
-                     Image("\(ButtonImage)")
+                    Image("\(String(describing: ButtonImage))")
                          .renderingMode(.original)
                  }
                  Text(ViewHeading)

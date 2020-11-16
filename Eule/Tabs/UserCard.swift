@@ -25,6 +25,7 @@ struct UserCardView: View {
             .frame(width: (UIScreen.main.bounds.width - 32), height: (UIScreen.main.bounds.height/5))
             .background(Color(.EuleGreen))
             .cornerRadius(15)
+            .shadow(color: Color.black.opacity(0.05),radius: 5)
             
         }
     }
