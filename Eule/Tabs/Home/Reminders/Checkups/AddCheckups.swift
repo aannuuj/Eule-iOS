@@ -23,152 +23,63 @@ struct AddCheckups: View {
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .leading, spacing: 6){
-                   ScrollView(.vertical, showsIndicators: false){
-                        
+                    ScrollView(.vertical, showsIndicators: false){
                         CustomForm {
-                            CustomSection(header:
-                                Text("Title of checkup")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Title of checkup"))  {
                                 VStack {
                                     TextField("Ex. App with Dr. Srtange", text: $CheckupName)
                                         .keyboardType(.alphabet)
-                                        .accentColor(Color.gray)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
                         CustomForm{
-                            CustomSection(header:
-                                Text("Checkup Type")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Checkup Type"))  {
                                 VStack {
                                     TextField("Ex: Dental", text: $CheckupType)
-                                        .accentColor(Color.gray)
                                         .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
                         CustomForm{
-                            CustomSection(header:
-                                Text("Doctors Name")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Doctors Name"))  {
                                 VStack {
                                     TextField("Enter Doctors name.", text: $docName)
-                                        .accentColor(Color.gray)
                                         .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
                         CustomForm{
-                            CustomSection(header:
-                                Text("Date")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Date"))  {
                                 VStack {
                                     TextField("Date", text: $CheckupDate)
-                                        .accentColor(Color.gray)
                                         .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
-                                    
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
                         CustomForm{
-                            CustomSection(header:
-                                Text("Timing")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Timing"))  {
                                 VStack {
                                     TextField("20: 45", text: $CheckupTime)
-                                        .accentColor(Color.gray)
                                         .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
-                                    
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
                         CustomForm{
-                                                  CustomSection(header:
-                                                      Text("Remind me before")
-                                                          .font(.EuleTitle)
-                                                          .foregroundColor(.secondary)
-                                                          .padding(.all)
-                                                  )  {
-                                                      VStack {
-                                                          TextField("30 mins", text: $remindMe)
-                                                              .accentColor(Color.gray)
-                                                              .keyboardType(.namePhonePad)
-                                                              .foregroundColor(.EuleGreen)
-                                                              .font(.EuleLabel)
-                                                              .padding(.leading, 15)
-                                                          
-                                                          
-                                                      }
-                                                  }
-                                              }
-                                              .background(Color.white)
-                                              .cornerRadius(12)
+                            CustomSection(header:Text("Remind me before"))  {
+                                VStack {
+                                    TextField("30 mins", text: $remindMe)
+                                        .keyboardType(.namePhonePad)
+                                }
+                            }
+                        }
                         CustomForm{
-                                                  CustomSection(header:
-                                                      Text("Note(Optional)")
-                                                          .font(.EuleTitle)
-                                                          .foregroundColor(.secondary)
-                                                          .padding(.all)
-                                                  )  {
-                                                      VStack {
-                                                          TextField("Eat Ice Cream", text: $note)
-                                                              .accentColor(Color.gray)
-                                                              .keyboardType(.namePhonePad)
-                                                              .foregroundColor(.EuleGreen)
-                                                              .font(.EuleLabel)
-                                                              .padding(.leading, 15)
-                                                          
-                                                          
-                                                      }
-                                                  }
-                                              }
-                                              .background(Color.white)
-                                              .cornerRadius(12)
+                            CustomSection(header:Text("Note(Optional)"))  {
+                                VStack {
+                                    TextField("Eat Ice Cream", text: $note)
+                                        .keyboardType(.namePhonePad)
+                                }
+                            }
+                        }
                         Spacer()
                         Button(action: {}){
                             HStack(alignment: .center){
@@ -181,19 +92,15 @@ struct AddCheckups: View {
                             .background(Color(.EuleGreen))
                             .cornerRadius(12)
                         }
-                        
-                        
                     }
                     .padding(.init(top: 15, leading: 10, bottom: 0, trailing: 10))
                 }
-                    
                 .navigationBarColor(.EuleBackground)
                 .navigationBarItems(leading: TitleView(title: "Checkup"))
                 .navigationBarTitle("", displayMode: .inline)
             }
         }
     }
-    
 }
 
 struct AddCheckups_Previews: PreviewProvider {

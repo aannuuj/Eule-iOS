@@ -18,11 +18,11 @@ struct AppRootView: View {
         
         VStack{
             if status && name && network.isActive {
-                if ServerEnvironment.active == .debug {
+                if ServerEnvironment.active != .debug {
                     AppView()
                 }
                 else{
-                    LockScreen()
+//                    CredCard()
                 }
             }
             else if status && network.isActive{
@@ -32,7 +32,9 @@ struct AppRootView: View {
                 NoInternetView()
             }
             else {
+//               t
                 NavigationView{
+
                     PhoneNumber()
 //                    AppView()
                 }

@@ -100,7 +100,11 @@ let userData: User =
         coins: "5682",
         colour: "\(Color.black)",
         bloodGroup: "",
-        phoneNo: ""
+        phoneNo: "",
+     req : "",
+     UID : "",
+     avatar : "String",
+   dob : "String"
     )
 
 let healthCardData: HealthCard =

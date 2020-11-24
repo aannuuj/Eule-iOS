@@ -17,6 +17,9 @@ struct UserName: View {
     @State private var inputImage: UIImage?
     @State public var BloodGroup = ""
     @State public var DOB = ""
+    lazy var viewModel: LoginViewModel = {
+        return LoginViewModel()
+    }()
     var size = UIScreen.main.bounds
     var body: some View {
         NavigationView{

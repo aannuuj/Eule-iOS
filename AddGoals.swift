@@ -15,7 +15,6 @@ struct AddGoals: View {
     var body: some View {
         
         VStack{
-            
             ZStack{
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
                 
@@ -28,61 +27,30 @@ struct AddGoals: View {
                         Spacer()
                         
                         CustomForm {
-                            CustomSection(header:
-                                Text("Goal Name")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Goal Name"))  {
                                 VStack {
                                     TextField("Ex: Hit Gym", text: $goalName)
                                         .keyboardType(.alphabet)
-                                        .accentColor(Color.gray)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
+                                }
+                            }
+                        }
+                        
+                        // add type picker
+                        CustomForm{
+                            CustomSection(header: Text("Goal Type") )  {
+                                VStack {
+                                    TextField("Ex: Workout", text: $goalType)
                                 }
                             }
                         }
                         .background(Color.white)
                         .cornerRadius(12)
                         
-                        // add type picker
                         CustomForm{
-                            CustomSection(header:
-                                Text("Goal Type")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
-                                VStack {
-                                    TextField("Ex: Workout", text: $goalType)
-                                        .accentColor(Color.gray)
-                                        .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
-                                }
-                            }
-                        }
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        CustomForm{
-                            CustomSection(header:
-                                Text("Time Duration")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Time Duration"))  {
                                 VStack {
                                     TextField("01:25:00", text: $goalTime)
-                                        .accentColor(Color.gray)
                                         .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
                                 }
                             }
                         }
@@ -90,27 +58,13 @@ struct AddGoals: View {
                         .cornerRadius(12)
                         // add picker
                         CustomForm{
-                            CustomSection(header:
-                                Text("Days")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Days"))  {
                                 VStack {
                                     TextField("Date", text: $goalDays)
-                                        .accentColor(Color.gray)
                                         .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
-                                    
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
                         Button(action: {}){
                             HStack(alignment: .center){
                                 Text("Done")
@@ -122,8 +76,6 @@ struct AddGoals: View {
                             .background(Color(.EuleGreen))
                             .cornerRadius(12)
                         }
-                        
-                        
                     }
                     .padding(.init(top: 15, leading: 10, bottom: 0, trailing: 10))
                 }

@@ -16,7 +16,8 @@ struct HomeCardView: View {
     private var card: HomeCard
     private var onRemove: (_ card: HomeCard) -> Void
     
-    private var thresholdPercentage: CGFloat = 0.5 // when the user has draged 50% the width of the screen in either direction
+    private var thresholdPercentage: CGFloat = 0.5
+    // when the user has draged 50% the width of the screen in either direction
     
     private enum LikeDislike: Int {
         case like, dislike, none

@@ -16,32 +16,27 @@ struct TempView: View {
     var body: some View {
         HStack(alignment: .center, spacing: 10){
             Spacer()
-           
             HStack{
-            VStack(alignment: .leading, spacing: 6){
-            Text(goalTitle.uppercased())
-                .font(.largeTitle)
-                .bold()
-                
-                .foregroundColor(.white)
-            Text( goalTime.uppercased())
-                .font(.EuleHeading)
-                .foregroundColor(.white)
-               
-            }
+                VStack(alignment: .leading, spacing: 6){
+                    Text(goalTitle.uppercased())
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(.white)
+                    Text( goalTime.uppercased())
+                        .font(.EuleHeading)
+                        .foregroundColor(.white)
+                }
                 Spacer()
                 Image(goalType)
-                           .resizable()
+                    .resizable()
                     .frame(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/8.4, alignment: .center)
             }
             Spacer()
-                
         }
-            .padding(.init(top: 20, leading: 10, bottom: 20, trailing: 10))
+        .padding(.init(top: 20, leading: 10, bottom: 20, trailing: 10))
         .frame(width: UIScreen.main.bounds.width - 20 , height:  UIScreen.main.bounds.height/4.5 )
-            .background(Color(backgroundColor))
-            .cornerRadius(15)
-         
+        .background(Color(backgroundColor))
+        .cornerRadius(15)
     }
 }
 

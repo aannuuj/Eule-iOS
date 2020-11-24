@@ -45,6 +45,8 @@ struct Prescription : Identifiable, Codable{
 
 typealias Users = [User]
 
+
+
 struct User: Codable {
     var name: String
     var euleID: String
@@ -54,6 +56,11 @@ struct User: Codable {
     var colour: String
     var bloodGroup: String
     var phoneNo: String
+    let req : String
+    let UID : String
+    let avatar : String
+    let dob : String
+  
 }
 
 struct HealthCard: Codable {
