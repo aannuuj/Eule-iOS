@@ -51,7 +51,7 @@ let goalsList = [
         goalName: "gym",
         goalTime: "15 Min",
         goalColor: "\(UIColor.EuleGreen)",
-        goalType: "Gym",
+        goalType: "gym",
         foregroundColor: "\(Color.white)"
     ),
     Goals(
@@ -82,6 +82,38 @@ let goalsList = [
         goalType: "Meditate",
         foregroundColor: "\(Color.black)"
     ),
+    Goals(
+        goalName: "Meditate",
+        goalTime: "25 Min",
+        goalColor: "\(UIColor.white)",
+        goalType: "Meditate",
+        foregroundColor: "\(Color.black)"
+    ),
+
+    Goals(
+        goalName: "Meditate",
+        goalTime: "25 Min",
+        goalColor: "\(UIColor.white)",
+        goalType: "Meditate",
+        foregroundColor: "\(Color.black)"
+    ),
+
+    Goals(
+        goalName: "Meditate",
+        goalTime: "25 Min",
+        goalColor: "\(UIColor.white)",
+        goalType: "Meditate",
+        foregroundColor: "\(Color.black)"
+    ),
+
+    Goals(
+        goalName: "Meditate",
+        goalTime: "25 Min",
+        goalColor: "\(UIColor.white)",
+        goalType: "Meditate",
+        foregroundColor: "\(Color.black)"
+    ),
+
     Goals(
         goalName: "Sleep",
         goalTime: "7 HRs",

@@ -24,7 +24,7 @@ struct Checkups: View {
                 HStack( spacing: 8){
                     // make a list of cards and fetch
                     ForEach(goals) { item in
-                        GoalsCard(goals: item)
+                        GoalsCard(goals: item, allViews: false)
                     }
                     AddCard()
                 }

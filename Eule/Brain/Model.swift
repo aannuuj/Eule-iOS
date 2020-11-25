@@ -18,7 +18,7 @@ struct Reminders: Identifiable, Codable{
     var intakeTime: String
     var reminderType: String
 }
-struct Goals: Identifiable, Codable{
+struct Goals: Identifiable, Codable, Hashable{
     var id = UUID()
     var goalName: String
     var goalTime: String

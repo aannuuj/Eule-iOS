@@ -32,7 +32,7 @@ struct AppRootView: View {
                 NoInternetView()
             }
             else {
-//               t
+//               
                 NavigationView{
 
                     PhoneNumber()
