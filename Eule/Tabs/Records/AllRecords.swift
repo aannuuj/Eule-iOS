@@ -11,7 +11,7 @@ import SwiftUI
 struct AllRecords: View {
     @State private var showBottomSheet = false
     @State public var text = ""
-    var labReports: [Reminders] = reminderList
+    var labReports: [Report] = reportData
     var body: some View {
         
         ZStack{

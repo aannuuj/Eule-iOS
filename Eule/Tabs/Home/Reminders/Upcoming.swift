@@ -19,8 +19,8 @@ struct Upcoming: View {
                 .foregroundColor(.gray)
             HStack(alignment: .center, spacing: 30){
                 
-                Card(reminder: reminderList[1], size: size)
-                Card(reminder: reminderList[2], size:size)
+                Card(reminder: reminderList[0], size: size)
+                Card(reminder: reminderList[1], size:size)
             }
         }
     }

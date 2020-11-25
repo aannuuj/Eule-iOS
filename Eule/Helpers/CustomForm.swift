@@ -29,7 +29,9 @@ public struct CustomForm<Content: View>: View {
     public var body: some View {
         VStack {
             content
-        }
+        }.background(Color.white)
+        .cornerRadius(12)
+        .shadow(color: Color.black.opacity(0.05),radius: 5)
     }
 }
 
@@ -52,10 +54,18 @@ public struct CustomSection<Parent: View, Footer: View, Content: View>: View {
         VStack {
             HStack {
                 header
+                    .font(.EuleTitle)
+                    .foregroundColor(.secondary)
+                    .padding(.all)
                 Spacer()
             }
             content
+                .accentColor(Color.gray)
+                .foregroundColor(.EuleGreen)
+                .font(.EuleLabel)
+                .padding(.leading, 15)
             HStack {
+                Spacer()
                 footer
                 Spacer()
             }
@@ -69,5 +79,14 @@ extension CustomSection where Footer == EmptyView {
         @ViewBuilder content: () -> Content
     ) {
         self.init(header: header, footer: EmptyView(), content: content)
+    }
+}
+
+struct HealthCardHeaderView : View {
+    var title : String
+    public var body: some View {
+        Text(title)
+            .font(.EuleLabel)
+            .foregroundColor(.black)
     }
 }

@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct ContentView: View {
     
@@ -18,16 +19,14 @@ struct ContentView: View {
                 VStack(alignment: .leading){
                     ZStack(alignment: .topLeading){
                         ScrollView(showsIndicators: false) {
-                            VStack(alignment: .leading, spacing: 20){
-                                Spacer()
-                                
-                                // parse data and more cards
-                                
-                                CardsView(image: "BackgroundImage", title: "Optimism may help you live longer", desc: "Can seeing the glass half full help you live longer?")
+                            VStack(alignment: .leading, spacing: 10){
+                       Spacer()
+                        .frame(height: 15)
+                                CardsView()
+                                    .padding(.trailing, 7)
                                 VStack(alignment: .leading, spacing: 10){
-                                    
                                     HStack{
-                                        Text("Bulletin")
+                                        Text(" Bulletin")
                                             .font(.EuleTitle)
                                             .foregroundColor(.gray)
                                         Spacer()
@@ -49,22 +48,25 @@ struct ContentView: View {
                                     .background(Color.white)
                                     .frame(width: 400, height: 100)
                                     .cornerRadius(15)
+                                    .shadow(color: Color.black.opacity(0.05),radius: 5)
                                 }
-                                .padding(.all, 3)
+                                .padding(.all, 10)
                                 RemindersView()
                                 GoalsView()
                             }
-                        }.padding(.top)
-                            .padding(.leading)
-                            .padding(.trailing)
-                        // make this in a line
+                        }
+                        .padding([.leading, .top, .trailing])
                     }
                 }
             }
             .navigationBarColor(.EuleBackground)
                 .navigationBarItems(leading: HomeLeftView(),trailing: HomeRightView())
                 .navigationBarTitle("",displayMode: .inline)
-            
+           
+            .onAppear(perform: {
+                print("userid  is \(Auth.auth().currentUser?.uid ?? "")")
+                
+            })
         }
     }
 }

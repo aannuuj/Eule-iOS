@@ -12,7 +12,7 @@ struct PrecriptionsView: View {
     
      @State private var Tapped = false
        @State var range: Range<Int> = 0..<3
-          var labReports: [Reminders] = reminderList
+          var labReports: [Prescription] = prescriptionData
           var body: some View {
               VStack(alignment: .leading){
                   HStack{
@@ -31,10 +31,10 @@ struct PrecriptionsView: View {
                           //card view
                       }
                   }
-               
+               // limit no of cards
                       VStack(alignment: .center, spacing: 8){
                           ForEach(labReports) { item in
-                           RecordsCard(labReport: item)
+                           PrescriptionCard(labReport: item)
                           }
                       
                   }

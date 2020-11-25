@@ -15,6 +15,7 @@ struct LockScreen: View {
       VStack {
             if self.isUnlocked {
                AppView()
+                .animation(.linear)
             } else {
                 VStack(alignment: .center, spacing: 15){
                     Image("Ill.Locked")
@@ -35,30 +36,42 @@ struct LockScreen: View {
         }
         .onAppear(perform: authenticate)
     }
+}
+extension LockScreen{
     func authenticate() {
+        
         let context = LAContext()
-        var error: NSError?
+        var authenticationError : NSError?
+        let reason = "We need to unlock your data."
+        context.localizedFallbackTitle = "Please use your Passcode"
 
         // check whether biometric authentication is possible
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-            // it's possible, so go ahead and use it
-            let reason = "We need to unlock your data."
-
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
-                // authentication has now completed
+        if context.canEvaluatePolicy(.deviceOwnerAuthentication, error: &authenticationError ) {
+            context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason)  {success, authenticationError  in
                 DispatchQueue.main.async {
                     if success {
                        self.isUnlocked = true
+                        // authentication has now completed
                     } else {
-                       return
+                        guard authenticationError != nil  else {
+                            return
+                        }
                     }
                 }
             }
-        } else {
-            // no biometrics
+        }
+        
+        else {
+            guard authenticationError != nil  else {
+                return
+            }
+            let alertController = UIAlertController(title: "Your phone looks insecure", message: "We care for your security. You need to setup a phone lock to help us in making it secure.", preferredStyle: .alert)
+            let yesAction = UIAlertAction(title: "Setup Device Lock", style: .default) { _ in
+                return
+            }
+            alertController.addAction(yesAction)
         }
     }
-    
 }
 
 

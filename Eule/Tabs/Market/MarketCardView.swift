@@ -25,7 +25,7 @@ struct MarketCardView: View {
                     .frame(alignment: .center)
                     .padding(.leading, 20)
                     .foregroundColor(.white)
-                    .font(.EuleMarketCards)
+                    .font(.LargeHeadline)
     
             }
             .padding(.trailing)

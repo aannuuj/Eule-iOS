@@ -2,23 +2,23 @@
 //  Endpoint.swift
 //  APIManager
 //
-//  Created by Ishan Chhabra on 19/05/19.
-//  Copyright © 2019 Ishan Chhabra. All rights reserved.
-//
+
 
 import Foundation
+
 
 protocol Endpoint {
     var baseUrl: String { get }
     var path: String { get }
-    var urlParameters: [URLQueryItem] { get }
+//    var urlParameters: [URLQueryItem] { get }
 }
 
 extension Endpoint{
     var urlComponent: URLComponents {
         var urlComponent = URLComponents(string: baseUrl)
+        urlComponent?.scheme = "https"
         urlComponent?.path = path
-        urlComponent?.queryItems = urlParameters
+//        urlComponent?.queryItems = urlParameters
         return urlComponent!
     }
     
@@ -27,41 +27,87 @@ extension Endpoint{
     }
 }
 
-enum Order: String{
-    case popular, latest, oldest
-}
 
 
-enum UnsplashEndpoint: Endpoint{
-    case photos(id: String, order: Order)
-    case users(id: String, order: Order)
+// add more cases here
+enum EuleEndpoint: Endpoint{
+    
+    case users
+    case healthcard
+    case editHealthCard
+    case home
+    
+    // Reminders
+    case reminders
+    case editReminder
+    case addReminder
+    case deleteReminder
+    
+    
+    // Goals
+    case goals
+    case editGoal
+    case addGoal
+    case deleteGoal
+    
+    // Records
+    case records
+    case addRecords
+    case deleteRecords
+    
+    
+    
     var baseUrl: String {
-        return "https://api.unsplash.com"
+        let url = ServerEnvironment.active.baseURL
+        return url
     }
     
     var path: String {
         switch self {
-        case .photos:
-            return "/photos"
         case .users:
             return "/users"
-            
+        case .healthcard:
+            return "/healthcard"
+        case .home:
+            return "/home"
+        case .editHealthCard:
+            return "/healthcard/edit"
+        case .reminders:
+            return "/reminder"
+        case .editReminder:
+            return "/reminders/edit"
+        case .addReminder:
+            return "/reminders/add"
+        case .goals:
+            return "/goals"
+        case .editGoal:
+            return "/goals/edit"
+        case .addGoal:
+            return "/goals/add"
+        case .deleteGoal:
+            return "/goals/delete"
+        case .deleteReminder:
+            return "/reminders/delete"
+        case .records:
+            return "/records"
+        case .addRecords:
+            return "/records/add"
+        case .deleteRecords:
+            return "/records/delete"
         }
     }
     
-    var urlParameters: [URLQueryItem] {
-        switch self {
-        case .photos(let id, let order):
-            return [
-                URLQueryItem(name: "client_id", value: id),
-                URLQueryItem(name: "order_by", value: order.rawValue)
-            ]
-        case .users(id: let id, order: let order):
-              return [
-                          URLQueryItem(name: "client_id", value: id),
-                          URLQueryItem(name: "order_by", value: order.rawValue)
-                      ]
-        }
-    }
+    
+//    var urlParameters: [URLQueryItem] {
+//        switch self {
+//        case .user:
+//            return [
+//                URLQueryItem(name: "client_id", value: ""),
+//                URLQueryItem(name: "order_by", value: "")
+//            ]
+//        }
+//    }
+    
     
 }
+

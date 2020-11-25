@@ -9,15 +9,14 @@
 import SwiftUI
 
 struct UserCardView: View {
-    var userImage = "User.Image"
-    var userName = "Jhon Snow"
+    var user: User = userData
     var body: some View {
         ZStack(alignment: .leading){
             HStack(alignment: .center){
                 HStack{
-                Image(userImage)
+                    Image(user.profilePicture)
                     .clipped()
-                Text("\(userName)")
+                    Text(user.name)
                     .foregroundColor(.white)
                 Spacer()
                 }
@@ -26,6 +25,7 @@ struct UserCardView: View {
             .frame(width: (UIScreen.main.bounds.width - 32), height: (UIScreen.main.bounds.height/5))
             .background(Color(.EuleGreen))
             .cornerRadius(15)
+            .shadow(color: Color.black.opacity(0.05),radius: 5)
             
         }
     }

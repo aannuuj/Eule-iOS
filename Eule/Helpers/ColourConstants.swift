@@ -14,7 +14,7 @@ extension Color {
         return Color(red:0.11, green:0.91, blue:0.72)
     }
     static var EuleBlue: Color{
-        return Color(red: 015, green: 0.89, blue: 0.84)
+        return Color(red: 0.148, green: 0.887, blue: 0.843)
     }
     static var EuleBackground: Color{
         return Color(red: 0.95, green: 0.99, blue: 0.98)
@@ -35,7 +35,7 @@ extension UIColor {
         return UIColor(red:0.11, green:0.91, blue:0.72, alpha: 1.00)
     }
     static var EuleBlue: UIColor{
-        return UIColor(red: 015, green: 0.89, blue: 0.84, alpha: 1.00)
+        return UIColor(red: 0.148, green: 0.887, blue: 0.843, alpha: 1.00)
     }
     static var EuleBackground: UIColor{
         return UIColor(red: 0.95, green: 0.99, blue: 0.98, alpha: 1.00)
@@ -63,7 +63,9 @@ extension UIColor {
     static var BloodBackground: UIColor{
         return UIColor(red: 0.945, green: 0.984, blue: 0.98, alpha: 1.00)
           }
-  
+    static var EuleWhite: UIColor{
+        return UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.00)
+          }
  
 }
 

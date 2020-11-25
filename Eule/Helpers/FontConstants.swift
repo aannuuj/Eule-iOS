@@ -29,11 +29,14 @@ extension Font{
     static var EuleTitle2: Font{
         return EuleFont(.regular, 16)
     }
+    static var EuleTitle3: Font{
+        return EuleFont(.bold, 16)
+    }
     static var  EuleTabBar: Font{
            return EuleFont(.medium, 12)
        }
     //market place
-   static var EuleMarketCards: Font{
+   static var LargeHeadline: Font{
     return  EuleFont(.heavy, 24)
    }
     static var EuleLabel: Font{

@@ -27,21 +27,21 @@ struct RemindersView: View {
                         .font(.EuleTitle)
                         .foregroundColor(.EuleGreen)
                     //card view
-                }
+                }.padding(.leading)
+                .padding(.trailing)
             }
             ScrollView(.horizontal, showsIndicators: false){
                 HStack(alignment: .center, spacing: 8){
                 // make a list of cards and fetch
                 ForEach(reminders) { item in
                     Card(reminder: item, size: 120)
-//                     Text("Hi")
                 }
                     AddCard()
-                    
             }
             }
             
-        }
+        }.padding(.leading)
+        
     }
 }
 

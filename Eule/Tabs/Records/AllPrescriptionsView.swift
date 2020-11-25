@@ -11,7 +11,7 @@ import SwiftUI
 struct AllPrescriptionsView: View {
     @State private var showBottomSheet = false
     @State public var text = ""
-    var labReports: [Reminders] = reminderList
+    var labReports: [Prescription] = prescriptionData
     var body: some View {
         
         ZStack{
@@ -50,7 +50,7 @@ struct AllPrescriptionsView: View {
                         VStack(alignment: .leading, spacing: 8){
                             Spacer()
                             ForEach(labReports) { item in
-                                RecordsCard(labReport: item)
+                                PrescriptionCard(labReport: item)
                             }
                         }
                         
