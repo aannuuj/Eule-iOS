@@ -9,7 +9,6 @@
 import SwiftUI
 
 struct AllGoals: View {
-    @State public var text = ""
     @State var addGoalsScreen = false
     var goals: [Goals] = goalsList
     
@@ -33,15 +32,14 @@ struct AllGoals: View {
         }
         .navigationBarColor(.EuleBackground)
         .navigationBarTitle("", displayMode: .inline)
-        .navigationBarItems(leading: TitleView(title: "Goals"),trailing:   Button(action: {
-            
-            self.addGoalsScreen.toggle()
-        })
-        {
-            Image("Add")
-        }.sheet(isPresented: $addGoalsScreen) {
-            AddGoals()
-        }  )
+        .navigationBarItems(
+            leading: TitleView(title: "Goals"),
+            trailing: Button(action:{self.addGoalsScreen.toggle()}){
+                Image("Add")
+            }
+            .sheet(isPresented: $addGoalsScreen) {
+                AddGoals()
+            })
     }
 }
 

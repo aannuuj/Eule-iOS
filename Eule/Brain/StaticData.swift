@@ -72,7 +72,7 @@ let goalsList = [
         goalName: "2000cl",
         goalTime: "",
         goalColor: "\(UIColor.white)",
-        goalType: "Food",
+        goalType: "Yoga",
         foregroundColor: "\(Color.black)"
     ),
     Goals(
@@ -89,7 +89,7 @@ let goalsList = [
         goalType: "Meditate",
         foregroundColor: "\(Color.black)"
     ),
-
+    
     Goals(
         goalName: "Meditate",
         goalTime: "25 Min",
@@ -97,7 +97,7 @@ let goalsList = [
         goalType: "Meditate",
         foregroundColor: "\(Color.black)"
     ),
-
+    
     Goals(
         goalName: "Meditate",
         goalTime: "25 Min",
@@ -105,7 +105,7 @@ let goalsList = [
         goalType: "Meditate",
         foregroundColor: "\(Color.black)"
     ),
-
+    
     Goals(
         goalName: "Meditate",
         goalTime: "25 Min",
@@ -113,12 +113,12 @@ let goalsList = [
         goalType: "Meditate",
         foregroundColor: "\(Color.black)"
     ),
-
+    
     Goals(
         goalName: "Sleep",
         goalTime: "7 HRs",
         goalColor: "\(UIColor.white)",
-        goalType: "Sleep",
+        goalType: "Meditate",
         foregroundColor: "\(Color.black)"
     )
 ]
@@ -131,12 +131,11 @@ let userData: User =
         profilePicture: "User.Image",
         coins: "5682",
         colour: "\(Color.black)",
-        bloodGroup: "",
+        bloodGroup: 1,
         phoneNo: "",
-     req : "",
-     UID : "",
-     avatar : "String",
-   dob : "String"
+        req : "",
+        UID : "",
+        avatar : "String"
     )
 
 let healthCardData: HealthCard =
@@ -146,11 +145,13 @@ let healthCardData: HealthCard =
         InsuranceCompany: "Tata",
         Allergies: "586",
         FamilyCondition: "gd456",
-        SmokingStatus: false,
+        SmokingStatus: true,
         DrinkingStatus: false,
         Medication: "dh",
         Contact1: "5446854",
-        Contact2: "324156"
+        Contact2: "324156",
+        ContactName1: "Ross",
+        ContactName2: "Mike"
     )
 
 let prescriptionData = [
@@ -304,23 +305,23 @@ let homeCard = [
         link: "www.eule.in/static",
         desc: ""),
     HomeCard(
-    id: 8,
-    image: "BackgroundImage",
-    title: "Optamism helps you",
-    link: "www.eule.in/static",
-    desc: ""),
+        id: 8,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
     HomeCard(
-    id: 9,
-    image: "BackgroundImage",
-    title: "Optamism helps you",
-    link: "www.eule.in/static",
-    desc: ""),
+        id: 9,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: ""),
     HomeCard(
-    id: 10,
-    image: "BackgroundImage",
-    title: "Optamism helps you",
-    link: "www.eule.in/static",
-    desc: "")
+        id: 10,
+        image: "BackgroundImage",
+        title: "Optamism helps you",
+        link: "www.eule.in/static",
+        desc: "")
     
     
 ]

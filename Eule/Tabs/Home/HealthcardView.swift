@@ -11,13 +11,10 @@ import SwiftUI
 struct HealthcardView: View {
     @State var healthCard : HealthCard = healthCardData
     @State public var Tapped = false
-    
-    @State public var SmokingStatus = false
-    
     @Environment(\.presentationMode) var mode: Binding<PresentationMode>
     @GestureState private var dragOffset = CGSize.zero
+    
     var body: some View {
-        
         VStack{
             ZStack{
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
@@ -25,10 +22,9 @@ struct HealthcardView: View {
                     VStack{
                         ZStack{
                             Text("Healthcard layout")
-                            Image("")
-                            
-                        }.frame(width: (UIScreen.main.bounds.width - 32), height: (UIScreen.main.bounds.height/4) )
-                        .background(Color(.gray))
+                        }
+                        .frame(width: (UIScreen.main.bounds.width - 32), height: (UIScreen.main.bounds.height/4) )
+                        .background(LinearGradient.BackgroundGradient)
                         .opacity(50)
                         .cornerRadius(15)
                         
@@ -38,9 +34,7 @@ struct HealthcardView: View {
                 
                             HStack(alignment: .center, spacing: 20){
                                 CustomForm{
-                                    CustomSection(header:
-                                                    Text("Blood Group")
-                                    )  {
+                                    CustomSection(header:Text("Blood Group"))  {
                                         HStack(){
                                             Text(healthCard.BloodGroup)
                                             Spacer()
@@ -48,9 +42,7 @@ struct HealthcardView: View {
                                     }
                                 }
                                 CustomForm{
-                                    CustomSection(header:
-                                                    Text("Date of Birth")
-                                    )  {
+                                    CustomSection(header:Text("Date of Birth"))  {
                                         HStack() {
                                             Text(healthCard.DOB)
                                             Spacer()
@@ -59,33 +51,24 @@ struct HealthcardView: View {
                                 }
                             }
                             CustomForm{
-                                CustomSection(header:
-                                                Text("Insuarance Company")
-                                )  {
+                                CustomSection(header: Text("Insuarance Company"))  {
                                     HStack() {
                                         Text(healthCard.InsuranceCompany)
                                         Spacer()
                                     }
                                 }
                             }
-                            
                             CustomForm{
-                                CustomSection(header:
-                                                Text("Allergies")
-                                )  {
+                                CustomSection(header: Text("Allergies"))  {
                                     HStack() {
                                         Text(healthCard.Allergies)
                                         Spacer()
                                     }
                                 }
                             }
-                            
                             HealthCardHeaderView(title: "Medical Documents")
-                            
                             CustomForm{
-                                CustomSection(header:
-                                                Text("Familty Conditions")
-                                )  {
+                                CustomSection(header:Text("Familty Conditions"))  {
                                     HStack() {
                                         Text(healthCard.FamilyCondition)
                                             .keyboardType(.namePhonePad)
@@ -94,50 +77,42 @@ struct HealthcardView: View {
                                 }
                             }
                             CustomForm{
-                                CustomSection(header:
-                                                Text("Personal Conditions")
-                                )  {
+                                CustomSection(header:Text("Personal Conditions"))  {
                                     HStack() {
                                         Text(healthCard.FamilyCondition)
                                         Spacer()
                                     }
                                 }
                             }
-                            
-                            // add switch
                             HStack(alignment: .center, spacing: 10){
                                 CustomForm{
-                                    CustomSection(header:
-                                                    Text("Smoking Status")
-                                                  
-                                    )  {
+                                    CustomSection(header:Text("Smoking Status"))  {
                                         HStack() {
-                                            Toggle(isOn: $SmokingStatus) {
-                                                
-                                            }.padding()
+                                            Toggle(isOn: $healthCard.SmokingStatus) {
+                                            }
+                                            .disabled(true)
+                                            .padding()
                                             .foregroundColor(.EuleGreen)
                                             .toggleStyle(SwitchToggleStyle())
-                                        
-                                            Spacer()
                                         }
-                                        
                                     }
                                 }
                                 CustomForm{
-                                    CustomSection(header:
-                                                    Text("Drinking Status")
-                                    )  {
+                                    CustomSection(header: Text("Drinking Status"))  {
                                         HStack() {
-                                            Spacer()
+                                            Toggle(isOn: $healthCard.DrinkingStatus) {
+                                            }
+                                            .disabled(true)
+                                            .padding()
+                                            .foregroundColor(.EuleGreen)
+                                            .toggleStyle(SwitchToggleStyle())
                                         }
                                     }
                                 }
+
                             }
                             CustomForm{
-                                CustomSection(header:
-                                                Text("Current Medications")
-                                              
-                                )  {
+                                CustomSection(header:Text("Current Medications"))  {
                                     HStack() {
                                         Text(healthCard.Medication)
                                         Spacer()
@@ -152,9 +127,7 @@ struct HealthcardView: View {
                         VStack(alignment: .leading, spacing: 10){
                             HealthCardHeaderView(title: "Emergancy Contacts")
                             CustomForm{
-                                CustomSection(header:
-                                                Text("Name")
-                                )  {
+                                CustomSection(header:Text("\(healthCard.ContactName1)"))  {
                                     HStack {
                                         Text(healthCard.Contact1)
                                         Spacer()
@@ -162,9 +135,7 @@ struct HealthcardView: View {
                                 }
                             }
                             CustomForm{
-                                CustomSection(header:
-                                                Text("Name")
-                                )  {
+                                CustomSection(header:Text("\(healthCard.ContactName1)"))  {
                                     HStack() {
                                         Text(healthCard.Contact2)
                                         Spacer()
@@ -185,7 +156,6 @@ struct HealthcardView: View {
                 Image("Edit")
                     .frame(width: 44, height: 44)
             })
-            
             .gesture(
                 DragGesture()
                     .updating(
@@ -198,7 +168,6 @@ struct HealthcardView: View {
             )
         }
     }
-    
 }
 
 

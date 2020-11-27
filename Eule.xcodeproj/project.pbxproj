@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		93447D73C855745ACDB92474 /* Pods_Eule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */; };
+		BE0690F925703A6200EDAC2C /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0690F825703A6200EDAC2C /* Picker.swift */; };
 		BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BAD7250FAA380037AFA6 /* UserName.swift */; };
 		BE12BADC250FABC90037AFA6 /* MedicalReports.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADB250FABC90037AFA6 /* MedicalReports.swift */; };
 		BE12BADE250FB05A0037AFA6 /* WebViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */; };
@@ -143,6 +144,7 @@
 		426CD69EB60B9FC19055F91F /* Pods-Eule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eule.release.xcconfig"; path = "Target Support Files/Pods-Eule/Pods-Eule.release.xcconfig"; sourceTree = "<group>"; };
 		49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEC93311CDDE79712FF9D707 /* Pods-Eule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eule.debug.xcconfig"; path = "Target Support Files/Pods-Eule/Pods-Eule.debug.xcconfig"; sourceTree = "<group>"; };
+		BE0690F825703A6200EDAC2C /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Picker.swift; path = Eule/Helpers/Picker.swift; sourceTree = SOURCE_ROOT; };
 		BE12BAD7250FAA380037AFA6 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
 		BE12BADB250FABC90037AFA6 /* MedicalReports.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MedicalReports.swift; path = ../../MedicalReports.swift; sourceTree = "<group>"; };
 		BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WebViewExtension.swift; path = ../Login/WebViewExtension.swift; sourceTree = "<group>"; };
@@ -607,6 +609,7 @@
 				BE5168D5250BA15D002450CE /* PhoneNumber.swift */,
 				BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */,
 				BE12BAD7250FAA380037AFA6 /* UserName.swift */,
+				BE0690F825703A6200EDAC2C /* Picker.swift */,
 				BE12BADB250FABC90037AFA6 /* MedicalReports.swift */,
 			);
 			path = Login;
@@ -853,6 +856,7 @@
 				BEA0801724E451EF00C855AD /* NoInternetView.swift in Sources */,
 				BEA24123250D32510037B628 /* CustomForm.swift in Sources */,
 				BEC252B42566E86B008657B1 /* UserDefaults.swift in Sources */,
+				BE0690F925703A6200EDAC2C /* Picker.swift in Sources */,
 				BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */,
 				BE91502C24D4B2F2004B0BD1 /* ContentView.swift in Sources */,
 				BEB8E8F2250E932A00286678 /* TempView.swift in Sources */,

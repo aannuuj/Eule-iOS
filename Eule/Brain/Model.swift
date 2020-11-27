@@ -54,12 +54,12 @@ struct User: Codable {
     var profilePicture: String
     var coins: String
     var colour: String
-    var bloodGroup: String
+    var bloodGroup: Int?
     var phoneNo: String
     let req : String
     let UID : String
     let avatar : String
-    let dob : String
+    var dob = Date()
   
 }
 
@@ -74,12 +74,14 @@ struct HealthCard: Codable {
     var Medication : String
     var Contact1 : String
     var Contact2 : String
+    var ContactName1 : String
+   var ContactName2 : String
 }
 
 struct Checkup: Identifiable, Codable {
     var id = UUID()
     var title : String
-    var checkupType : String
+    var checkupType : Int?
     var DoctorsName: String
     var Date : String
     var Timing : String
