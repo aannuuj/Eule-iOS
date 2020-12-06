@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 
 struct ProfileView: View {
+    
     //@Binding private var location : String
     var location = "Pune"
     @State var alert = false
@@ -29,7 +30,7 @@ struct ProfileView: View {
                             
                             UserSection(title: "") {
                                 ProfileLinkView(
-                                    // action: {  },
+                                   // action: {  },
                                     title: "Location | \(location)",
                                     subtitle: "",
                                     imageName: "Location"
@@ -51,12 +52,9 @@ struct ProfileView: View {
                                     imageName: "Rewards"
                                 )
                             }
-                            
                             Button(action: {
                                 self.Tapped = true
                             }){
-                                
-                                
                                 HStack(alignment: .center, spacing: 10){
                                     Image(systemName: "flame")
                                         .accentColor(.black)
@@ -73,7 +71,7 @@ struct ProfileView: View {
                                     Spacer()
                                     Image(systemName: "chevron.right")
                                         .accentColor(.black)
-                                }
+                                }.padding(.trailing)
                                 
                             }.frame(width: (UIScreen.main.bounds.width - 32), height: 55 )
                             .background(Color(.white))
@@ -81,16 +79,15 @@ struct ProfileView: View {
                             .sheet(isPresented: $Tapped) {
                                 IconView().environmentObject(IconNames())
                             }
-                            
                             UserSection(title: "") {
                                 ProfileLinkView(
                                     title: "Help & FAQ's",
                                     subtitle: "Have questions?",
                                     imageName: "FAQ"
                                 )
-                                
                                 ProfileLinkView(
-                                    title: "Referals",
+                                    action: { shareButton() },
+                                    title: "Share app",
                                     subtitle: "Invite your friends to earn more",
                                     imageName: "Refrals"
                                 )
@@ -123,12 +120,10 @@ struct ProfileView: View {
                             Spacer()
                         }
                     }
-                    .navigationBarColor(.EuleBackground
-                    )
+                    .navigationBarColor(.EuleBackground)
                     .navigationBarItems(leading: LeftView(ButtonImage: "", ViewHeading: "Profile"))
                     .navigationBarTitle("",displayMode: .inline)
                 }  .alert(isPresented: $alert) {
-                    
                     Alert(title: Text("Are you sure you want to logout?"), message: Text(""),primaryButton: .destructive(Text("Log Out"), action: ({
                         try! Auth.auth().signOut()
                         UserDefaults.standard.set(false, forKey: "status")
@@ -141,5 +136,12 @@ struct ProfileView: View {
                 }
             }
         }
+    }
+    func shareButton() {
+        
+        guard let data = URL(string: "https://www.eule.in/cs") else { return }
+        let av = UIActivityViewController(activityItems: [data], applicationActivities: nil)
+        
+        UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
     }
 }
