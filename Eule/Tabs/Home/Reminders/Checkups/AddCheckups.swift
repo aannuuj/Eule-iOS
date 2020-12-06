@@ -9,12 +9,15 @@
 import SwiftUI
 
 struct AddCheckups: View {
+    @State public var checkupType : Int?
     @State public var CheckupName = ""
-    @State public var CheckupType = ""
-    @State public var CheckupDate = ""
+     var checkUpArray = [ "dental", "oral", "eye", "ortho"]
+    var reminderArray = [ "30 mins", "45 mins", "1 hr", "2 hr"]
+  
+   
+    @State public var checkupDate = Date()
     @State public var docName = ""
-    @State public var CheckupTime = ""
-    @State public var remindMe = ""
+    @State public var remindMe : Int?
     @State public var note = ""
     var body: some View {
         
@@ -35,8 +38,7 @@ struct AddCheckups: View {
                         CustomForm{
                             CustomSection(header:Text("Checkup Type"))  {
                                 VStack {
-                                    TextField("Ex: Dental", text: $CheckupType)
-                                        .keyboardType(.namePhonePad)
+                                    PickerTextField(data: checkUpArray, placeholder: "Select Item", lastSelectedIndex: self.$checkupType)
                                 }
                             }
                         }
@@ -50,25 +52,18 @@ struct AddCheckups: View {
                         }
                         CustomForm{
                             CustomSection(header:Text("Date"))  {
-                                VStack {
-                                    TextField("Date", text: $CheckupDate)
-                                        .keyboardType(.namePhonePad)
+                                VStack (alignment: .leading){
+                                    DatePicker("", selection: $checkupDate)
+                                        .datePickerStyle(CompactDatePickerStyle())
+                                        .padding(.trailing, 170)
                                 }
                             }
                         }
-                        CustomForm{
-                            CustomSection(header:Text("Timing"))  {
-                                VStack {
-                                    TextField("20: 45", text: $CheckupTime)
-                                        .keyboardType(.namePhonePad)
-                                }
-                            }
-                        }
+                      
                         CustomForm{
                             CustomSection(header:Text("Remind me before"))  {
                                 VStack {
-                                    TextField("30 mins", text: $remindMe)
-                                        .keyboardType(.namePhonePad)
+                                    PickerTextField(data: reminderArray, placeholder: "Select Item", lastSelectedIndex: self.$remindMe)
                                 }
                             }
                         }
@@ -88,10 +83,7 @@ struct AddCheckups: View {
                                     .font(.EuleLabel)
                             }
                             .padding(.all)
-                            .frame(width: (UIScreen.main.bounds.width - 20), height: 56, alignment: .center)
-                            .background(Color(.EuleGreen))
-                            .cornerRadius(12)
-                        }
+                        }.buttonStyle(EuleGreenButton())
                     }
                     .padding(.init(top: 15, leading: 10, bottom: 0, trailing: 10))
                 }

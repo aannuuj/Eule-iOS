@@ -9,149 +9,72 @@
 import SwiftUI
 
 struct AddReminders: View {
+    
     @State public var MedicineName = ""
-    @State public var MedicineType = ""
+    @State public var MedicineType : Int?
     @State public var MedicineDays = ""
-    @State public var Consumption = ""
-    @State public var CheckupTime = ""
-    @State public var Meal = ""
-
+    @State public var Consumption : Int?
+    @State public var ConsumptionTime = Date()
+    @State public var Meal: Int?
+    
+    public var selectedArray = [ "Tablets", "Syrup", "Injection", "Capsule", "Ointment", "Powder", "Cream", "Suspension"]
+    public var consumptionPerDay = [ "1", "2", "3", "4", "5"]
+    public var meal = [ "Post", "Pre meal"]
+    
     var body: some View {
-        
         VStack{
             ZStack{
                 Color.EuleBackground.edgesIgnoringSafeArea(.all)
                 
                 VStack(alignment: .leading, spacing: 6){
                     ScrollView(.vertical, showsIndicators: false){
-                        
                         CustomForm {
-                            CustomSection(header:
-                                Text("Medicine Name")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Medicine Name"))  {
                                 VStack {
                                     TextField("Ex. Calcium", text: $MedicineName)
-                                        .keyboardType(.alphabet)
-                                        .accentColor(Color.gray)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
                         CustomForm{
-                            CustomSection(header:
-                                Text("Medicine Type")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Medicine Type"))  {
                                 VStack {
-                                    TextField("Ex: Tablet", text: $MedicineType)
-                                        .accentColor(Color.gray)
-                                        .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
+                                    PickerTextField(data: selectedArray, placeholder: "Select Item", lastSelectedIndex: self.$MedicineType)
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
                         CustomForm{
-                            CustomSection(header:
-                                Text("Days")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            // implement days picker in here
+                            CustomSection(header:Text("Days"))  {
                                 VStack {
                                     TextField("Mon-Tue", text: $MedicineDays)
-                                        .accentColor(Color.gray)
-                                        .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
                         CustomForm{
-                            CustomSection(header:
-                                Text("Consumption per day")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header:Text("Consumption per day"))  {
                                 VStack {
-                                    TextField("Date", text: $Consumption)
-                                        .accentColor(Color.gray)
-                                        .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
-                                    
+                                    PickerTextField(data: consumptionPerDay, placeholder: "Select Item", lastSelectedIndex: self.$Consumption)
                                 }
                             }
                         }
-                       
-                        .background(Color.white)
-                        .cornerRadius(12)
                         ForEach(0..<2) { item in
                             CustomForm{
-                                CustomSection(header:
-                                    Text("Intake")
-                                        .font(.EuleTitle)
-                                        .foregroundColor(.secondary)
-                                        .padding(.all)
-                                )  {
+                                CustomSection(header:Text("Intake"))  {
                                     VStack {
-                                        TextField("20: 45", text: self.$CheckupTime)
-                                            .accentColor(Color.gray)
-                                            .keyboardType(.namePhonePad)
-                                            .foregroundColor(.EuleGreen)
-                                            .font(.EuleLabel)
-                                            .padding(.leading, 15)
-                                        
-                                        
+                                        DatePicker("", selection: $ConsumptionTime, displayedComponents: .hourAndMinute)
+                                            .datePickerStyle(CompactDatePickerStyle())
+                                            .padding(.trailing, 60)
                                     }
                                 }
                             }
-                            .background(Color.white)
-                            .cornerRadius(12)
                         }
                         CustomForm{
-                            CustomSection(header:
-                                Text("Meal Annotation")
-                                    .font(.EuleTitle)
-                                    .foregroundColor(.secondary)
-                                    .padding(.all)
-                            )  {
+                            CustomSection(header: Text("Meal Annotation") )  {
                                 VStack {
-                                    TextField("Post Meal", text: $Meal)
-                                        .accentColor(Color.gray)
-                                        .keyboardType(.namePhonePad)
-                                        .foregroundColor(.EuleGreen)
-                                        .font(.EuleLabel)
-                                        .padding(.leading, 15)
-                                    
-                                    
+                                    PickerTextField(data:  meal, placeholder: "Select Item", lastSelectedIndex: self.$Meal)
                                 }
                             }
                         }
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        
                         Spacer()
                         Button(action: {}){
                             HStack(alignment: .center){
@@ -160,23 +83,17 @@ struct AddReminders: View {
                                     .font(.EuleLabel)
                             }
                             .padding(.all)
-                            .frame(width: (UIScreen.main.bounds.width - 20), height: 56, alignment: .center)
-                            .background(Color(.EuleGreen))
-                            .cornerRadius(12)
-                        }
-                        
-                        
+                            
+                        }.buttonStyle(EuleGreenButton())
                     }
                     .padding(.init(top: 15, leading: 10, bottom: 0, trailing: 10))
                 }
-                    
                 .navigationBarColor(.EuleBackground)
                 .navigationBarItems(leading: TitleView(title: "Medicine"))
                 .navigationBarTitle("", displayMode: .inline)
             }
         }
     }
-    
 }
 
 struct AddReminders_Previews: PreviewProvider {
