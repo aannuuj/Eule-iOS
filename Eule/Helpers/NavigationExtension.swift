@@ -9,6 +9,17 @@
 import Foundation
 import SwiftUI
 
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}
+
 struct NavigationBarModifier: ViewModifier {
         
     var backgroundColor: UIColor?
@@ -27,6 +38,7 @@ struct NavigationBarModifier: ViewModifier {
      
 
     }
+    
     
     func body(content: Content) -> some View {
         ZStack{

@@ -16,7 +16,7 @@ struct BackButton: View {
             Button(action : {
                 self.mode.wrappedValue.dismiss()
             }){
-                Image(systemName: "arrow.left")
+                Image(systemName: "chevron.left")
             }
             Text(label)
         }.foregroundColor(Color.EuleGreen)
@@ -28,3 +28,5 @@ struct BackButton_Previews: PreviewProvider {
         BackButton(label: "")
     }
 }
+
+

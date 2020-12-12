@@ -156,16 +156,6 @@ struct HealthcardView: View {
                 Image("Edit")
                     .frame(width: 44, height: 44)
             })
-            .gesture(
-                DragGesture()
-                    .updating(
-                        $dragOffset, body: { (value, state, transaction) in
-                            if(value.startLocation.x < 20 && value.translation.width > 100) {
-                                self.mode.wrappedValue.dismiss()
-                            }
-                        }
-                    )
-            )
         }
     }
 }

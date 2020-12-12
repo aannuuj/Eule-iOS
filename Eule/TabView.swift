@@ -13,27 +13,18 @@ struct AppView: View {
     @State private var selection = 1
     init() {
         UITabBar.appearance().backgroundColor = UIColor.EuleWhite
-        
     }
     
     var body: some View {
-        
         TabView(selection: $selection) {
             ContentView()
                 .onTapGesture {
                     self.selection = 1
                 }
                 .tabItem {
-                    VStack {
-                        if selection == 1 {
-                            Image( "Tab.Home.Selected")
-                        }
-                        else {
-                            Image("Tab.Home")
-                        }
-                        Text("Home")
-                            .font(.EuleTabBar)
-                    }
+                    Image( self.selection == 1 ? "Tab.Home.Selected" : "Tab.Home")
+                    Text("Home")
+                        .font(.EuleTabBar)
                 }
                 .tag(1)
             RecordView()
@@ -41,15 +32,9 @@ struct AppView: View {
                     self.selection = 2
                 }
                 .tabItem {
-                    VStack {
-                        if selection == 2 {
-                            Image( "Tab.Records.Selected")
-                        } else {
-                            Image("Tab.Records")
-                        }
-                        Text("Records")
-                            .font(.EuleTabBar)
-                    }
+                    Image( self.selection == 2 ? "Tab.Records.Selected" : "Tab.Records")
+                    Text("Records")
+                        .font(.EuleTabBar)
                 }
                 .tag(2)
             MarketView()
@@ -57,16 +42,9 @@ struct AppView: View {
                     self.selection = 3
                 }
                 .tabItem {
-                    VStack {
-                        if selection == 3 {
-                            Image( "Tab.Market.Selected")
-                        } else {
-                            Image("Tab.Market")
-                        }
-                        Text("Market")
-                            .font(.EuleTabBar)
-                    }
-                    
+                    Image( self.selection == 3 ?  "Tab.Market.Selected" : "Tab.Market")
+                    Text("Market")
+                        .font(.EuleTabBar)
                 }
                 .tag(3)
             SocialView()
@@ -74,15 +52,9 @@ struct AppView: View {
                     self.selection = 4
                 }
                 .tabItem {
-                    VStack {
-                        if selection == 4 {
-                            Image( "Tab.Social.Selected")
-                        } else {
-                            Image("Tab.Social")
-                        }
-                        Text("Social")
-                            .font(.EuleTabBar)
-                    }
+                    Image( self.selection == 4 ? "Tab.Social.Selected" : "Tab.Social")
+                    Text("Social")
+                        .font(.EuleTabBar)
                 }
                 .tag(4)
             ProfileView().environmentObject(IconNames())
@@ -90,17 +62,11 @@ struct AppView: View {
                     self.selection = 5
                 }
                 .tabItem {
-                    VStack {
-                        if selection == 5 {
-                            Image( "Tab.Profile.Selected")
-                        } else {
-                            Image("Tab.Profile")
-                        }
-                        Text("Profile")
-                            .font(.EuleTabBar)
-                    }
-                    
-                }  .tag(5)
+                    Image( self.selection == 5 ? "Tab.Profile.Selected" : "Tab.Profile" )
+                    Text("Profile")
+                        .font(.EuleTabBar)
+                }
+                .tag(5)
             
         }
         .accentColor(Color.EuleGreen)

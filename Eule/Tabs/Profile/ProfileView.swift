@@ -16,6 +16,7 @@ struct ProfileView: View {
     var location = "Pune"
     @State var alert = false
     @State private var Tapped = false
+    @State private var showMail = false
     var body: some View {
         
         NavigationView{
@@ -81,10 +82,14 @@ struct ProfileView: View {
                             }
                             UserSection(title: "") {
                                 ProfileLinkView(
+                                    action: { self.showMail = true },
                                     title: "Help & FAQ's",
                                     subtitle: "Have questions?",
                                     imageName: "FAQ"
                                 )
+                                .sheet(isPresented: $showMail) {
+                                    MailView()
+                                }
                                 ProfileLinkView(
                                     action: { shareButton() },
                                     title: "Share app",

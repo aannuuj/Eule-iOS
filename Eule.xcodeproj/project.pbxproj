@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8A277EF4257D17630035EF02 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A277EF3257D17630035EF02 /* MailView.swift */; };
-		8AEF500A2584484000C4D5BA /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF50092584484000C4D5BA /* PhotoPicker.swift */; };
 		93447D73C855745ACDB92474 /* Pods_Eule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */; };
 		BE0690F925703A6200EDAC2C /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0690F825703A6200EDAC2C /* Picker.swift */; };
 		BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BAD7250FAA380037AFA6 /* UserName.swift */; };
@@ -127,6 +125,7 @@
 		BEC733FA24D7684D00150220 /* FontConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC733F924D7684D00150220 /* FontConstants.swift */; };
 		BEE2C07B24FEEC6B008B7E23 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2C07A24FEEC6B008B7E23 /* ImageView.swift */; };
 		BEE2C07D24FEF14B008B7E23 /* OTPVerification.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */; };
+		BEE71964257D187000D9E288 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE71963257D187000D9E288 /* MailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -278,6 +277,7 @@
 		BEC733F924D7684D00150220 /* FontConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontConstants.swift; sourceTree = "<group>"; };
 		BEE2C07A24FEEC6B008B7E23 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		BEE2C07C24FEF14B008B7E23 /* OTPVerification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OTPVerification.swift; path = ../../OTPVerification.swift; sourceTree = "<group>"; };
+		BEE71963257D187000D9E288 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MailView.swift; path = Eule/MailView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,6 +347,7 @@
 			isa = PBXGroup;
 			children = (
 				BE12BADD250FB05A0037AFA6 /* WebViewExtension.swift */,
+				BEE71963257D187000D9E288 /* MailView.swift */,
 				BEA24122250D32510037B628 /* CustomForm.swift */,
 				BEA24118250CF99D0037B628 /* TitleView.swift */,
 				BE5168DF250BA719002450CE /* LeftView.swift */,
@@ -868,7 +869,7 @@
 				BE91502C24D4B2F2004B0BD1 /* ContentView.swift in Sources */,
 				BEB8E8F2250E932A00286678 /* TempView.swift in Sources */,
 				BE91503C24D4B950004B0BD1 /* TabView.swift in Sources */,
-				8A277EF4257D17630035EF02 /* MailView.swift in Sources */,
+				BEE71964257D187000D9E288 /* MailView.swift in Sources */,
 				BEA0802124E49ABD00C855AD /* EuleButtons.swift in Sources */,
 				BE890DE9254171CD00F1E6E9 /* Model.swift in Sources */,
 				BE8D5349250C24930081206E /* AllReminders.swift in Sources */,
