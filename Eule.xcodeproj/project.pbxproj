@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A277EF4257D17630035EF02 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A277EF3257D17630035EF02 /* MailView.swift */; };
+		8AEF500A2584484000C4D5BA /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEF50092584484000C4D5BA /* PhotoPicker.swift */; };
 		93447D73C855745ACDB92474 /* Pods_Eule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */; };
 		BE0690F925703A6200EDAC2C /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0690F825703A6200EDAC2C /* Picker.swift */; };
 		BE12BAD8250FAA380037AFA6 /* UserName.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE12BAD7250FAA380037AFA6 /* UserName.swift */; };
@@ -143,6 +145,8 @@
 /* Begin PBXFileReference section */
 		426CD69EB60B9FC19055F91F /* Pods-Eule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eule.release.xcconfig"; path = "Target Support Files/Pods-Eule/Pods-Eule.release.xcconfig"; sourceTree = "<group>"; };
 		49BB2CD89641CEA772BEEEA2 /* Pods_Eule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Eule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8A277EF3257D17630035EF02 /* MailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MailView.swift; sourceTree = "<group>"; };
+		8AEF50092584484000C4D5BA /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		AEC93311CDDE79712FF9D707 /* Pods-Eule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Eule.debug.xcconfig"; path = "Target Support Files/Pods-Eule/Pods-Eule.debug.xcconfig"; sourceTree = "<group>"; };
 		BE0690F825703A6200EDAC2C /* Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Picker.swift; path = Eule/Helpers/Picker.swift; sourceTree = SOURCE_ROOT; };
 		BE12BAD7250FAA380037AFA6 /* UserName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserName.swift; sourceTree = "<group>"; };
@@ -502,6 +506,7 @@
 		BE91502324D4B2F2004B0BD1 /* Eule */ = {
 			isa = PBXGroup;
 			children = (
+				8A277EF3257D17630035EF02 /* MailView.swift */,
 				BE53E6FA25599B44000F75D1 /* Icons */,
 				BE9673DB24EBAA4300AF0AD9 /* Eule.entitlements */,
 				BE91502424D4B2F2004B0BD1 /* AppDelegate.swift */,
@@ -611,6 +616,7 @@
 				BE12BAD7250FAA380037AFA6 /* UserName.swift */,
 				BE0690F825703A6200EDAC2C /* Picker.swift */,
 				BE12BADB250FABC90037AFA6 /* MedicalReports.swift */,
+				8AEF50092584484000C4D5BA /* PhotoPicker.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -839,6 +845,7 @@
 				BE91505424D4D1A3004B0BD1 /* HomeRightView.swift in Sources */,
 				BE8E665F250CC1140090E7E2 /* Card2.swift in Sources */,
 				BEA0801924E4547E00C855AD /* ProductView.swift in Sources */,
+				8AEF500A2584484000C4D5BA /* PhotoPicker.swift in Sources */,
 				BEB8E902250EB6C300286678 /* Medication.swift in Sources */,
 				BE81D30A25100FFC00704D8B /* ComingSoonDecider.swift in Sources */,
 				BE91502724D4B2F2004B0BD1 /* SceneDelegate.swift in Sources */,
@@ -861,6 +868,7 @@
 				BE91502C24D4B2F2004B0BD1 /* ContentView.swift in Sources */,
 				BEB8E8F2250E932A00286678 /* TempView.swift in Sources */,
 				BE91503C24D4B950004B0BD1 /* TabView.swift in Sources */,
+				8A277EF4257D17630035EF02 /* MailView.swift in Sources */,
 				BEA0802124E49ABD00C855AD /* EuleButtons.swift in Sources */,
 				BE890DE9254171CD00F1E6E9 /* Model.swift in Sources */,
 				BE8D5349250C24930081206E /* AllReminders.swift in Sources */,

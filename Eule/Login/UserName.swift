@@ -7,13 +7,22 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct UserName: View {
     @State private var Tapped = false
     @State private var image: Image?
     @State var user: User = userData
     @State private var showingImagePicker = false
-    @State private var inputImage: UIImage?
+    @State private var images: [UIImage] = []
+    
+    private var configuration: PHPickerConfiguration = {
+        var configuration = PHPickerConfiguration(photoLibrary: PHPhotoLibrary.shared())
+        configuration.selectionLimit = 1
+        configuration.filter = .any(of: [.livePhotos, .images])
+        return configuration
+    }()
+    
     var selectedArray = [ "A+", "A-", "B+", "B-", "O+", "O-", "AB+", "AB+"]
     lazy var viewModel: LoginViewModel = {
         return LoginViewModel()
@@ -84,17 +93,11 @@ struct UserName: View {
             }
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarHidden(true)
-            .sheet(isPresented: $showingImagePicker, onDismiss: loadImage) {
-                ImagePicker(image: self.$inputImage)
-                    .accentColor(.EuleGreen)
+            .sheet(isPresented: $showingImagePicker) {
+                PhotoPicker(configuration: configuration, pickerResult: $images, isPresented: $showingImagePicker)
             }
         }
         
     }
-    func loadImage() {
-        guard let inputImage = inputImage else { return }
-        image = Image(uiImage: inputImage)
-    }
-    
 }
 
