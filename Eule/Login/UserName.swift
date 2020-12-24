@@ -37,11 +37,23 @@ struct UserName: View {
                     VStack(alignment: .center, spacing: 30){
                         Spacer()
                             .frame( height: size.width/10)
-                        // add image of from the picker
-                        Image(systemName: "person.fill" )
-                            .onTapGesture {
-                                self.showingImagePicker = true
-                            }
+
+                        if let image = images.first {
+                            Image(uiImage: image)
+                                .resizable()
+                                .frame(width: size.width / 2)
+                                .aspectRatio(contentMode: .fit)
+                                .onTapGesture {
+                                    self.showingImagePicker = true
+                                }
+                        } else {
+                            Image(systemName: "person.fill")
+                                .font(.largeTitle)
+                                .onTapGesture {
+                                    self.showingImagePicker = true
+                                }
+                        }
+                        
                         TextField("UserName", text: $user.name)
                             .font(.EuleHeading)
                             .keyboardType(.default)
